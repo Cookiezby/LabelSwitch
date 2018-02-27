@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LabelSwitch_Example' do
+  pod 'LabelSwitch', :path => '../'
+
+  target 'LabelSwitch_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

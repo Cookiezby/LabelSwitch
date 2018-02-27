@@ -1,0 +1,6 @@
+framework module Pods_LabelSwitch_Tests {
+  umbrella header "Pods-LabelSwitch_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

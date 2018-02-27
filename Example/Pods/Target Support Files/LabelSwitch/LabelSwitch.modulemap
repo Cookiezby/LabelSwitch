@@ -1,0 +1,6 @@
+framework module LabelSwitch {
+  umbrella header "LabelSwitch-umbrella.h"
+
+  export *
+  module * { export * }
+}

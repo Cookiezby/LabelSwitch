@@ -1,0 +1,16 @@
+PODS:
+  - LabelSwitch (0.1.0)
+
+DEPENDENCIES:
+  - LabelSwitch (from `../`)
+
+EXTERNAL SOURCES:
+  LabelSwitch:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LabelSwitch: e1bd3296a3bf4a16b0f47657b54bb680438883f9
+
+PODFILE CHECKSUM: a898de11b0f271336544f6e30dfc02c11c75244a
+
+COCOAPODS: 1.3.1
