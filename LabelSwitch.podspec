@@ -31,7 +31,6 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'LabelSwitch/Classes/**/*'
-  s.swift_version = '4.0'
   
   # s.resource_bundles = {
   #   'LabelSwitch' => ['LabelSwitch/Assets/*.png']
