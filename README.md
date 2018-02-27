@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/LabelSwitch.svg?style=flat)](http://cocoapods.org/pods/LabelSwitch)
 [![Platform](https://img.shields.io/cocoapods/p/LabelSwitch.svg?style=flat)](http://cocoapods.org/pods/LabelSwitch)
 
+<img src="sample.gif" width="180" height="94" />
+
 ## Installation
 
 LabelSwitch is available through [CocoaPods](http://cocoapods.org). To install
