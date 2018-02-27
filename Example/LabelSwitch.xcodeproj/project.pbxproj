@@ -215,7 +215,6 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = YTPKQZ56PQ;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -518,7 +517,7 @@
 			baseConfigurationReference = 4B4702550120B5E68063AD24 /* Pods-LabelSwitch_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YTPKQZ56PQ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabelSwitch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -535,7 +534,7 @@
 			baseConfigurationReference = D16153E815CC5D979B1DEBCF /* Pods-LabelSwitch_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YTPKQZ56PQ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LabelSwitch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

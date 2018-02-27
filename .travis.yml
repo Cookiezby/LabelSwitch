@@ -1,4 +1,3 @@
-s:
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
@@ -10,6 +9,6 @@ language: swift
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test  -enableCodeCoverage YES -workspace Example/LabelSwitch.xcworkspace -scheme LabelSwitch-Example -sdk iphonesimulator11.2 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/LabelSwitch.xcworkspace -scheme LabelSwitch-Example -sdk iphonesimulator11.2 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
 
