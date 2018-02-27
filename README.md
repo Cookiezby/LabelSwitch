@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/LabelSwitch.svg?style=flat)](http://cocoapods.org/pods/LabelSwitch)
 [![Platform](https://img.shields.io/cocoapods/p/LabelSwitch.svg?style=flat)](http://cocoapods.org/pods/LabelSwitch)
 
-<img src="sample.gif" width="180" height="94" />
+<img src="sample.gif" width="120" height="61" />
 
 ## Installation
 
