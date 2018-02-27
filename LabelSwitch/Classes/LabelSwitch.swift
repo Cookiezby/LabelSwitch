@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol  TextSwitchDelegate : class {
+public protocol  LabelSwitchDelegate : class {
     func switchChangToState(_ state: SwitchState) -> Void
 }
 
@@ -45,7 +45,7 @@ struct TextTypeUIState {
     private var leftUIState  = TextTypeUIState()
     private var rightUIState = TextTypeUIState()
     
-    public weak var delegate: TextSwitchDelegate?
+    public weak var delegate: LabelSwitchDelegate?
     public var curState: SwitchState
     
     @IBInspectable var lBackColor: UIColor = .white {

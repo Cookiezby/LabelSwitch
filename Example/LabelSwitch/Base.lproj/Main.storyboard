@@ -22,9 +22,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-yi-cLv">
-                                <rect key="frame" x="83" y="264" width="240" height="128"/>
+                                <rect key="frame" x="83" y="264" width="173" height="128"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-i0-4O4" customClass="LabelSwitch" customModule="LabelSwitch">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-i0-4O4" customClass="LabelSwitch" customModule="LabelSwitch">
                                         <rect key="frame" x="0.0" y="0.0" width="173" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -56,6 +56,9 @@
                             <constraint firstItem="wIm-yi-cLv" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="dBS-sy-z63"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelSwitch" destination="PGQ-i0-4O4" id="Zjz-eq-zIh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
