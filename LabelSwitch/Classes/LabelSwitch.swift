@@ -1,8 +1,8 @@
 //
-//  TextSwitch.swift
-//  KaneMemo
+//  LabelSwitch.swift
+//  LabelSwitch
 //
-//  Created by cookie on 07/12/2017.
+//  Created by cookie on 20/02/2018.
 //  Copyright © 2017 cookie. All rights reserved.
 //
 
