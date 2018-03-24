@@ -46,7 +46,14 @@ struct TextTypeUIState {
     private var rightUIState = TextTypeUIState()
     
     public weak var delegate: LabelSwitchDelegate?
-    public var curState: SwitchState
+    public var curState: SwitchState {
+        didSet{
+            switch curState {
+            case .L: updateUIState(leftUIState)
+            case .R: updateUIState(rightUIState)
+            }
+        }
+    }
     
     @IBInspectable var lBackColor: UIColor = .white {
         didSet{
@@ -93,11 +100,11 @@ struct TextTypeUIState {
     private var widthLayout: NSLayoutConstraint?
     private var heightLayout: NSLayoutConstraint?
 
-    public init(center: CGPoint, leftSetting: LabelSwtichSetting, rightSetting: LabelSwtichSetting, circlePadding: CGFloat = 1) {
+    public init(center: CGPoint, leftSetting: LabelSwtichSetting, rightSetting: LabelSwtichSetting, circlePadding: CGFloat = 1, defaultState: SwitchState = .L) {
         self.leftSetting = leftSetting
         self.rightSetting = rightSetting
-        self.curState = .L
         self.circlePadding = circlePadding
+        self.curState = defaultState
         super.init(frame: .zero)
         self.center = center
         clipsToBounds = true
@@ -241,11 +248,9 @@ struct TextTypeUIState {
         UIView.animate(withDuration: 0.3) {
             switch self.curState {
             case .L:
-                self.updateUIState(self.rightUIState)
                 self.delegate?.switchChangToState(.R)
                 self.curState = .R
             case .R:
-                self.updateUIState(self.leftUIState)
                 self.delegate?.switchChangToState(.L)
                 self.curState = .L
             }
