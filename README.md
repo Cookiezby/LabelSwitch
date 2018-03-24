@@ -31,7 +31,8 @@ let rs = LabelSwtichSetting(text: "午後",
                             font: UIFont.boldSystemFont(ofSize: 20),
                  backgroundColor: .green)
 
-let labelSwitch = LabelSwitch(center: .zero, leftSetting: ls, rightSetting: rs)
+// You can set the default state of the switch,
+let labelSwitch = LabelSwitch(center: .zero, leftSetting: ls, rightSetting: rs, defaultState: .L)
 
 // And you can set the delegate to know when the switch was tapped
 
