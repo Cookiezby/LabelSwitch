@@ -21,6 +21,8 @@ struct TextTypeUIState {
     
     var leftTextMaskFrame:  CGRect = .zero
     var rightTextMaskFrame: CGRect = .zero
+    
+    var backgroundColor:    UIColor = .clear
 }
 
 @IBDesignable public class LabelSwitch: UIView {
@@ -126,6 +128,7 @@ struct TextTypeUIState {
         setupBounds()
         setupTextMask()
         setupTextBackground()
+        setupBackgroundColor()
         setupText()
         setupCircle()
         
@@ -247,6 +250,14 @@ struct TextTypeUIState {
         
         leftTextBackground.backgroundColor  = leftSetting.backgroundColor
         rightTextBackground.backgroundColor = rightSetting.backgroundColor
+        
+        leftTextBackground.layer.cornerRadius  = bounds.height / 2
+        rightTextBackground.layer.cornerRadius = bounds.height / 2
+    }
+    
+    private func setupBackgroundColor() {
+        leftUIState.backgroundColor = leftSetting.backgroundColor
+        rightUIState.backgroundColor = rightSetting.backgroundColor
     }
 
     /// Called when the circle is touched
@@ -271,6 +282,7 @@ struct TextTypeUIState {
         
         leftTextBackground.frame  = state.leftBgFrame
         rightTextBackground.frame = state.rightBgFrame
+        backgroundColor = state.backgroundColor
     }
     
     
