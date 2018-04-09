@@ -1,6 +1,6 @@
 {
   "name": "LabelSwitch",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "Switch with label in background",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Cookiezby/LabelSwitch",
@@ -9,15 +9,14 @@
     "file": "LICENSE"
   },
   "authors": {
-    "zhubingyi1992@gmail.com": "zhu.bingyi1992@gmail.com"
+    "cookiezby@gmail.com": "cookiezby@gmail.com"
   },
   "source": {
     "git": "https://github.com/Cookiezby/LabelSwitch.git",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "LabelSwitch/Classes/**/*",
-  "swift_version": "4.0"
+  "source_files": "LabelSwitch/Classes/**/*"
 }

@@ -54,6 +54,11 @@ struct TextTypeUIState {
             }
         }
     }
+    public var circleShadow: Bool {
+        didSet{
+            circleView.layer.shadowOpacity = circleShadow ? 0.5 : 0.0
+        }
+    }
     
     @IBInspectable var lBackColor: UIColor = .white {
         didSet{
@@ -105,6 +110,7 @@ struct TextTypeUIState {
         self.rightSetting = rightSetting
         self.circlePadding = circlePadding
         self.curState = defaultState
+        self.circleShadow = true
         super.init(frame: .zero)
         self.center = center
         clipsToBounds = true
@@ -273,6 +279,7 @@ struct TextTypeUIState {
         self.rightSetting = LabelSwtichSetting.defaultRight
         self.circlePadding = 1
         self.curState = .L
+        self.circleShadow = true
         super.init(coder: aDecoder)
         clipsToBounds = true
         addSubview(leftTextBackground)

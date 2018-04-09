@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         labelSwitch.delegate = self
         labelSwitch.curState = .R
+        labelSwitch.circleShadow = false
         // Do any additional setup after loading the view, typically from a nib.
     }
 

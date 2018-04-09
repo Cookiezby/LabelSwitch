@@ -1,5 +1,5 @@
 PODS:
-  - LabelSwitch (0.1.0)
+  - LabelSwitch (0.1.2)
 
 DEPENDENCIES:
   - LabelSwitch (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LabelSwitch: 0433b71ee222606795ba549d708c7cd945c7d5ed
+  LabelSwitch: 91f9db2e1cbb200aabe1de4a879f95d60d99527c
 
 PODFILE CHECKSUM: a898de11b0f271336544f6e30dfc02c11c75244a
 
