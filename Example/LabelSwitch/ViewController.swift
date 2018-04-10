@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         labelSwitch.delegate = self
         labelSwitch.curState = .R
         labelSwitch.circleShadow = false
+        labelSwitch.circleColor = .red
         // Do any additional setup after loading the view, typically from a nib.
     }
 

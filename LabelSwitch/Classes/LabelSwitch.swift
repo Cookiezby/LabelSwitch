@@ -56,9 +56,15 @@ struct TextTypeUIState {
             }
         }
     }
-    public var circleShadow: Bool {
+    public var circleShadow: Bool = true {
         didSet{
             circleView.layer.shadowOpacity = circleShadow ? 0.5 : 0.0
+        }
+    }
+    
+    public var circleColor: UIColor = .white {
+        didSet{
+            circleView.backgroundColor = circleColor
         }
     }
     
