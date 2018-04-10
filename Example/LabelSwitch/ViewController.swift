@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         labelSwitch.curState = .R
         labelSwitch.circleShadow = false
         labelSwitch.circleColor = .red
+        labelSwitch.fullSizeTapEnabled = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 

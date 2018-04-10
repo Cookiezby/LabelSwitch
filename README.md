@@ -21,21 +21,27 @@ pod 'LabelSwitch'
 You can create the view through code or InterfaceBuilder
 
 ```swift
-let ls = LabelSwtichSetting(text: "午前",
+let ls = LabelSwtichSetting(text: "Text1",
                        textColor: .white,
                             font: UIFont.boldSystemFont(ofSize: 15),
                  backgroundColor: .red)
         
-let rs = LabelSwtichSetting(text: "午後",
+let rs = LabelSwtichSetting(text: "Text2",
                        textColor: .white,
                             font: UIFont.boldSystemFont(ofSize: 20),
                  backgroundColor: .green)
 
-// You can set the default state of the switch,
+// Set the default state of the switch,
 let labelSwitch = LabelSwitch(center: .zero, leftSetting: ls, rightSetting: rs, defaultState: .L)
 
-// And you can set the delegate to know when the switch was tapped
+// Set the appearance of the circle button
+labelSwitch.circleShadow = false
+labelSwitch.circleColor = .red
 
+// Make switch be triggered by tapping on any position in the switch
+labelSwitch.fullSizeTapEnabled = true
+
+// Set the delegate to inform when the switch was triggered
 labelSwitch.delegate = self
 
 extension ViewController: LabelSwitchDelegate {

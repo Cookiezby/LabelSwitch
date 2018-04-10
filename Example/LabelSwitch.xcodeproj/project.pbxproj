@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		3FCE599881BA9C988E5C908E /* Pods-LabelSwitch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabelSwitch_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LabelSwitch_Tests/Pods-LabelSwitch_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4B4702550120B5E68063AD24 /* Pods-LabelSwitch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabelSwitch_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LabelSwitch_Example/Pods-LabelSwitch_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		51D1FAC01FE40FEF716EE65E /* LabelSwitch.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LabelSwitch.podspec; path = ../LabelSwitch.podspec; sourceTree = "<group>"; };
+		51D1FAC01FE40FEF716EE65E /* LabelSwitch.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LabelSwitch.podspec; path = ../LabelSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* LabelSwitch_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabelSwitch_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

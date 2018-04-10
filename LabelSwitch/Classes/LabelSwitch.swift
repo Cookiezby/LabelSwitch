@@ -47,6 +47,8 @@ struct TextTypeUIState {
     private var leftUIState  = TextTypeUIState()
     private var rightUIState = TextTypeUIState()
     
+    private var fullSizeTapGesture: UITapGestureRecognizer?
+    
     public weak var delegate: LabelSwitchDelegate?
     public var curState: SwitchState {
         didSet{
@@ -65,6 +67,18 @@ struct TextTypeUIState {
     public var circleColor: UIColor = .white {
         didSet{
             circleView.backgroundColor = circleColor
+        }
+    }
+    
+    public var fullSizeTapEnabled: Bool = false {
+        didSet{
+            if fullSizeTapEnabled {
+                fullSizeTapGesture = UITapGestureRecognizer(target: self, action: #selector(switchTaped(sender:)))
+                addGestureRecognizer(fullSizeTapGesture!)
+            } else {
+                fullSizeTapGesture?.removeTarget(self, action: #selector(switchTaped(sender:)))
+                fullSizeTapGesture = nil
+            }
         }
     }
     
@@ -118,7 +132,6 @@ struct TextTypeUIState {
         self.rightSetting = rightSetting
         self.circlePadding = circlePadding
         self.curState = defaultState
-        self.circleShadow = true
         super.init(frame: .zero)
         self.center = center
         clipsToBounds = true
@@ -297,7 +310,6 @@ struct TextTypeUIState {
         self.rightSetting = LabelSwtichSetting.defaultRight
         self.circlePadding = 1
         self.curState = .L
-        self.circleShadow = true
         super.init(coder: aDecoder)
         clipsToBounds = true
         addSubview(leftTextBackground)
