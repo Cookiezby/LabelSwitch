@@ -1,4 +1,4 @@
-# LabelSwitch
+![LabeSwitch](https://github.com/Tobaloidee/LabelSwitch/blob/master/logo/logotype-a-05.png)
 
 [![CI Status](http://img.shields.io/travis/Cookiezby/LabelSwitch.svg?style=flat)](https://travis-ci.org/Cookiezby/LabelSwitch)
 [![Version](https://img.shields.io/cocoapods/v/LabelSwitch.svg?style=flat)](http://cocoapods.org/pods/LabelSwitch)
@@ -62,3 +62,5 @@ cookiezby@gmail.com
 ## License
 
 LabelSwitch is available under the MIT license. See the LICENSE file for more info.
+
+logo by [@Tobaloidee](https://github.com/Tobaloidee)
