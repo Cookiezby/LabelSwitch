@@ -15,7 +15,7 @@
 		70B1EB8BA459B71A8C8886A24A7FE865 /* Pods-LabelSwitch_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1252FBBCE3AF12EC1EE2C86AEE8DD0F /* Pods-LabelSwitch_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B970A1F2E7AAA94E47F490AC68719F72 /* Pods-LabelSwitch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E844930A4F8DA45EF572A67799F5BA99 /* Pods-LabelSwitch_Tests-dummy.m */; };
 		E348315F3F13EE0E10F1DE475D15C7E4 /* LabelSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE504D9EC48F6E5402F1CBD59ADD74BC /* LabelSwitch-dummy.m */; };
-		F0CE8891B04078CE120B87848F30F518 /* LabelSwtichSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E329899EF0826B43520FEFCE70088E /* LabelSwtichSetting.swift */; };
+		F0CE8891B04078CE120B87848F30F518 /* LabelSwitchSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E329899EF0826B43520FEFCE70088E /* LabelSwitchSetting.swift */; };
 		F55BBA5C07C31011049B1E6FD71D624C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FAA9FF6BB5A530C1FDB0406AE7D2A297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -31,12 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02E329899EF0826B43520FEFCE70088E /* LabelSwtichSetting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwtichSetting.swift; path = LabelSwitch/Classes/LabelSwtichSetting.swift; sourceTree = "<group>"; };
-		07B96393FFE12F88B7BD8213A682A824 /* Pods_LabelSwitch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LabelSwitch_Example.framework; path = "Pods-LabelSwitch_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E329899EF0826B43520FEFCE70088E /* LabelSwitchSetting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchSetting.swift; path = LabelSwitch/Classes/LabelSwitchSetting.swift; sourceTree = "<group>"; };
+		07B96393FFE12F88B7BD8213A682A824 /* Pods_LabelSwitch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelSwitch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1474133DC36CDD07FE8C847A0DA27AA8 /* Pods-LabelSwitch_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LabelSwitch_Example.modulemap"; sourceTree = "<group>"; };
 		1A68DCF101FAFD3AD8489463349EE9C7 /* Pods-LabelSwitch_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LabelSwitch_Tests.modulemap"; sourceTree = "<group>"; };
 		25402B415CFDCADCFC4D6AAFF6A78A53 /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
-		25B67E06C19421561746A2687B9C51DD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		25B67E06C19421561746A2687B9C51DD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2A08FA79C692E6EBC644CA23A54B0B19 /* LabelSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LabelSwitch.modulemap; sourceTree = "<group>"; };
 		35C872487D4D9344D441F78598162A8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D8A7940725974801D9047BEB467250A /* Pods-LabelSwitch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,22 +46,22 @@
 		5AB09630DA8BB6CD81E5DBEF9F9BB71A /* Pods-LabelSwitch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		5ABCA8679E78F38686B649A05004917F /* Pods-LabelSwitch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6C86CB8491683E5EE296E94CBA82F23B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6C86CB8491683E5EE296E94CBA82F23B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		74F53A8529956FE718F4282AF61A1B02 /* LabelSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.xcconfig; sourceTree = "<group>"; };
 		75889631FC48A095FFE6877437D722CF /* Pods-LabelSwitch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Example-dummy.m"; sourceTree = "<group>"; };
 		85532CEF5B09BEB574C06D2A4E0DEFA9 /* Pods-LabelSwitch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		929C9678E8D996D2D5754E830463D620 /* Pods-LabelSwitch_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DADC4E8700426611EE9E55634423AA8 /* Pods-LabelSwitch_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-resources.sh"; sourceTree = "<group>"; };
 		9E2FDD69F588031857BABDA406467AA8 /* Pods-LabelSwitch_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LabelSwitch_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9EB3AB7C81FFB08C4224320E31DD1938 /* Pods_LabelSwitch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LabelSwitch_Tests.framework; path = "Pods-LabelSwitch_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A958FB61A48D987CB9C02DC9BA03967C /* LabelSwitch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LabelSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EB3AB7C81FFB08C4224320E31DD1938 /* Pods_LabelSwitch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelSwitch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A958FB61A48D987CB9C02DC9BA03967C /* LabelSwitch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = LabelSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE504D9EC48F6E5402F1CBD59ADD74BC /* LabelSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LabelSwitch-dummy.m"; sourceTree = "<group>"; };
 		B1E8F1EA66BAE508A56357F024EC2EAD /* LabelSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-prefix.pch"; sourceTree = "<group>"; };
 		C7FF822F4E36F4AB474D2737DC6D1EA3 /* Pods-LabelSwitch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LabelSwitch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C8DAFE50F983C570DC2C7E49E0A9D5B8 /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
 		D1252FBBCE3AF12EC1EE2C86AEE8DD0F /* Pods-LabelSwitch_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LabelSwitch_Example-umbrella.h"; sourceTree = "<group>"; };
-		D7D4688CF46CDFDB6D23A25237B02BA5 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LabelSwitch.framework; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D4688CF46CDFDB6D23A25237B02BA5 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E94DF2C9C9CCA5B101992D5F45710F /* Pods-LabelSwitch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-resources.sh"; sourceTree = "<group>"; };
 		E48A2DC8B8B956500D8FD680F6C7E1E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E844930A4F8DA45EF572A67799F5BA99 /* Pods-LabelSwitch_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				C8DAFE50F983C570DC2C7E49E0A9D5B8 /* LabelSwitch.swift */,
-				02E329899EF0826B43520FEFCE70088E /* LabelSwtichSetting.swift */,
+				02E329899EF0826B43520FEFCE70088E /* LabelSwitchSetting.swift */,
 				B62DE4A0057FD75E041A86808477A8C8 /* Pod */,
 				89FE14FC94AD11C99AF28231D1A616B3 /* Support Files */,
 			);
@@ -348,7 +348,7 @@
 			files = (
 				E348315F3F13EE0E10F1DE475D15C7E4 /* LabelSwitch-dummy.m in Sources */,
 				20788DDA6B418C6C8C44E3525759A691 /* LabelSwitch.swift in Sources */,
-				F0CE8891B04078CE120B87848F30F518 /* LabelSwtichSetting.swift in Sources */,
+				F0CE8891B04078CE120B87848F30F518 /* LabelSwitchSetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

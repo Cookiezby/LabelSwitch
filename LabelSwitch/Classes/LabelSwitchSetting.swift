@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public struct LabelSwtichSetting {
+public struct LabelSwitchSetting {
     public var text: String
     public var textColor: UIColor
     public var font: UIFont
@@ -22,12 +22,12 @@ public struct LabelSwtichSetting {
         self.backgroundColor = backgroundColor
     }
     
-    public static let defaultLeft = LabelSwtichSetting(text: "Left",
+    public static let defaultLeft = LabelSwitchSetting(text: "Left",
                                                   textColor: .white,
                                                   font: UIFont.boldSystemFont(ofSize: 20),
                                                   backgroundColor: .green)
     
-    public static let defaultRight = LabelSwtichSetting(text: "Right",
+    public static let defaultRight = LabelSwitchSetting(text: "Right",
                                                textColor: .white,
                                                font: UIFont.boldSystemFont(ofSize: 20),
                                                backgroundColor: .red)
