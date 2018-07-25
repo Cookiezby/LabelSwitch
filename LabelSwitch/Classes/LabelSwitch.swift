@@ -129,7 +129,7 @@ struct TextTypeUIState {
     private var heightLayout: NSLayoutConstraint?
 
 
-    public init(center: CGPoint, leftSetting: LabelSwitchSetting, rightSetting: LabelSwtichSetting, circlePadding: CGFloat = 1, minimumSize: CGSize = .zero, defaultState: SwitchState = .L) {
+    public init(center: CGPoint, leftSetting: LabelSwitchSetting, rightSetting: LabelSwitchSetting, circlePadding: CGFloat = 1, minimumSize: CGSize = .zero, defaultState: SwitchState = .L) {
         self.leftSetting = leftSetting
         self.rightSetting = rightSetting
         self.circlePadding = circlePadding
