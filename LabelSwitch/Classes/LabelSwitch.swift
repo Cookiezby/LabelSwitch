@@ -38,11 +38,12 @@ struct TextTypeUIState {
     private let leftLabel  = UILabel()
     private let rightLabel = UILabel()
     
-    private var leftSetting:  LabelSwtichSetting
-    private var rightSetting: LabelSwtichSetting
+    private var leftSetting:  LabelSwitchSetting
+    private var rightSetting: LabelSwitchSetting
     
     private var edge: CGFloat = 0
     private let circlePadding: CGFloat
+    private let minimumSize: CGSize
     
     private var leftUIState  = TextTypeUIState()
     private var rightUIState = TextTypeUIState()
@@ -127,10 +128,12 @@ struct TextTypeUIState {
     private var widthLayout: NSLayoutConstraint?
     private var heightLayout: NSLayoutConstraint?
 
-    public init(center: CGPoint, leftSetting: LabelSwtichSetting, rightSetting: LabelSwtichSetting, circlePadding: CGFloat = 1, defaultState: SwitchState = .L) {
+
+    public init(center: CGPoint, leftSetting: LabelSwitchSetting, rightSetting: LabelSwtichSetting, circlePadding: CGFloat = 1, minimumSize: CGSize = .zero, defaultState: SwitchState = .L) {
         self.leftSetting = leftSetting
         self.rightSetting = rightSetting
         self.circlePadding = circlePadding
+        self.minimumSize = minimumSize
         self.curState = defaultState
         super.init(frame: .zero)
         self.center = center
@@ -159,7 +162,8 @@ struct TextTypeUIState {
     
     /// Calculate the bounds of the switch accourding to the label's text and font size
     private func setupBounds () {
-        let circleSize = max(leftSetting.font.pointSize, rightSetting.font.pointSize) * 2
+        let circleMinimumSize = minimumSize.height - 2 * circlePadding
+        let circleSize = max(circleMinimumSize, max(leftSetting.font.pointSize, rightSetting.font.pointSize) * 2)
         edge = circleSize * 0.2
         leftLabel.text = leftSetting.text
         leftLabel.font  = leftSetting.font
@@ -168,7 +172,7 @@ struct TextTypeUIState {
         rightLabel.font = rightSetting.font
         rightLabel.sizeToFit()
         
-        let width = max(leftLabel.bounds.width, rightLabel.bounds.width) + 2 * edge + circleSize + 2 * circlePadding
+        let width = max(minimumSize.width, max(leftLabel.bounds.width, rightLabel.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
         bounds = CGRect(x: 0, y: 0, width: width, height: circleSize + 2 * circlePadding)
         layer.cornerRadius = bounds.height / 2
     }
@@ -306,9 +310,10 @@ struct TextTypeUIState {
     
     
     required public init?(coder aDecoder: NSCoder) {
-        self.leftSetting = LabelSwtichSetting.defaultLeft
-        self.rightSetting = LabelSwtichSetting.defaultRight
+        self.leftSetting = LabelSwitchSetting.defaultLeft
+        self.rightSetting = LabelSwitchSetting.defaultRight
         self.circlePadding = 1
+        self.minimumSize = .zero
         self.curState = .L
         super.init(coder: aDecoder)
         clipsToBounds = true
