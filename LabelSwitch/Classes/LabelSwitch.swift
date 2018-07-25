@@ -38,8 +38,8 @@ struct TextTypeUIState {
     private let leftLabel  = UILabel()
     private let rightLabel = UILabel()
     
-    private var leftSetting:  LabelSwtichSetting
-    private var rightSetting: LabelSwtichSetting
+    private var leftSetting:  LabelSwitchSetting
+    private var rightSetting: LabelSwitchSetting
     
     private var edge: CGFloat = 0
     private let circlePadding: CGFloat
@@ -128,7 +128,8 @@ struct TextTypeUIState {
     private var widthLayout: NSLayoutConstraint?
     private var heightLayout: NSLayoutConstraint?
 
-    public init(center: CGPoint, leftSetting: LabelSwtichSetting, rightSetting: LabelSwtichSetting, circlePadding: CGFloat = 1, minimumSize: CGSize = .zero, defaultState: SwitchState = .L) {
+
+    public init(center: CGPoint, leftSetting: LabelSwitchSetting, rightSetting: LabelSwtichSetting, circlePadding: CGFloat = 1, minimumSize: CGSize = .zero, defaultState: SwitchState = .L) {
         self.leftSetting = leftSetting
         self.rightSetting = rightSetting
         self.circlePadding = circlePadding
@@ -309,8 +310,8 @@ struct TextTypeUIState {
     
     
     required public init?(coder aDecoder: NSCoder) {
-        self.leftSetting = LabelSwtichSetting.defaultLeft
-        self.rightSetting = LabelSwtichSetting.defaultRight
+        self.leftSetting = LabelSwitchSetting.defaultLeft
+        self.rightSetting = LabelSwitchSetting.defaultRight
         self.circlePadding = 1
         self.minimumSize = .zero
         self.curState = .L
