@@ -13,40 +13,101 @@ public protocol  LabelSwitchDelegate : class {
     func switchChangToState(_ state: SwitchState) -> Void
 }
 
-struct TextTypeUIState {
-    var circleFrame:        CGRect = .zero
-    
-    var leftBgFrame:        CGRect = .zero
-    var rightBgFrame:       CGRect = .zero
-    
-    var leftTextMaskFrame:  CGRect = .zero
-    var rightTextMaskFrame: CGRect = .zero
-    
-    var backgroundColor:    UIColor = .clear
+private struct MaskBack {
+    var maskFrame: CGRect = .zero
+    var backFrame: CGRect = .zero {
+        didSet {
+            maskFrame = backFrame
+        }
+    }
+}
+
+private struct UIState {
+    var backgroundColor:UIColor = .clear
+    var circleFrame:CGRect = .zero
+    var maskL = MaskBack()
+    var maskR = MaskBack()
 }
 
 @IBDesignable public class LabelSwitch: UIView {
     
-    private let circleView = UIView()
+    private lazy var circleView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowOpacity = 0.5
+        addSubview(view)
+        return view
+    }()
     
-    private let leftTextBackground  = UIView()
-    private let rightTextBackground = UIView()
-
-    private let leftTextMask  = CALayer()
-    private let rightTextMask = CALayer()
-
-    private let leftLabel  = UILabel()
-    private let rightLabel = UILabel()
+    private lazy var textBackL: UIView = {
+        let view = UIView()
+        addSubview(view)
+        return view
+    }()
     
-    private var leftSetting:  LabelSwitchSetting
-    private var rightSetting: LabelSwitchSetting
+    private lazy var textBackR: UIView = {
+        let view = UIView()
+        addSubview(view)
+        return view
+    }()
+    
+    private lazy var textMaskL: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor.black.cgColor
+        labelL.layer.mask = layer
+        return layer
+    }()
+    
+    private lazy var textMaskR: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor.black.cgColor
+        labelR.layer.mask = layer
+        return layer
+    }()
+
+    private lazy var labelL: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        addSubview(label)
+        return label
+    }()
+    
+    private lazy var labelR: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        addSubview(label)
+        return label
+    }()
+    
+    private var switchConfigL: LabelSwitchConfig {
+        didSet {
+            stateL.backgroundColor     = switchConfigL.backgroundColor
+            textBackL.backgroundColor  = switchConfigL.backgroundColor
+            labelL.textColor           = switchConfigL.textColor
+            labelL.text                = switchConfigL.text
+            labelL.font                = switchConfigL.font
+            labelL.sizeToFit()
+        }
+    }
+    private var switchConfigR: LabelSwitchConfig {
+        didSet {
+            stateR.backgroundColor    = switchConfigR.backgroundColor
+            textBackR.backgroundColor = switchConfigR.backgroundColor
+            labelR.textColor          = switchConfigR.textColor
+            labelR.text               = switchConfigR.text
+            labelR.font               = switchConfigR.font
+            labelR.sizeToFit()
+        }
+    }
     
     private var edge: CGFloat = 0
     private let circlePadding: CGFloat
     private let minimumSize: CGSize
     
-    private var leftUIState  = TextTypeUIState()
-    private var rightUIState = TextTypeUIState()
+    private var stateL = UIState()
+    private var stateR = UIState()
     
     private var fullSizeTapGesture: UITapGestureRecognizer?
     
@@ -54,11 +115,12 @@ struct TextTypeUIState {
     public var curState: SwitchState {
         didSet{
             switch curState {
-            case .L: updateUIState(leftUIState)
-            case .R: updateUIState(rightUIState)
+            case .L: updateUIState(stateL)
+            case .R: updateUIState(stateR)
             }
         }
     }
+    
     public var circleShadow: Bool = true {
         didSet{
             circleView.layer.shadowOpacity = circleShadow ? 0.5 : 0.0
@@ -83,208 +145,90 @@ struct TextTypeUIState {
         }
     }
     
-    @IBInspectable var lBackColor: UIColor = .white {
-        didSet{
-            leftSetting.backgroundColor = lBackColor
-        }
-    }
-    @IBInspectable var rBackColor: UIColor = .white {
-        didSet{
-            rightSetting.backgroundColor = rBackColor
-        }
-    }
-    
-    @IBInspectable var lTextColor: UIColor = .white {
-        didSet{
-            leftSetting.textColor = lTextColor
-        }
-    }
-    
-    @IBInspectable var rTextColor: UIColor = .white {
-        didSet{
-            rightSetting.textColor = rTextColor
+    private var calculatedSize: CGSize = .zero {
+        didSet {
+            bounds = CGRect(origin: .zero, size: calculatedSize)
+            layer.cornerRadius = calculatedSize.height / 2
+            setupTextMask()
+            setupLabel()
+            setupCircle()
         }
     }
 
-    @IBInspectable var lText: String = "" {
-        didSet{
-            leftSetting.text = lText
-        }
-    }
-    
-    @IBInspectable var rText: String = "" {
-        didSet{
-            rightSetting.text = rText
-        }
-    }
-    
-    @IBInspectable var fontSize: CGFloat = 10 {
-        didSet{
-            leftSetting.font = UIFont.systemFont(ofSize: fontSize)
-            rightSetting.font = UIFont.systemFont(ofSize: fontSize)
-        }
-    }
-    
-    private var widthLayout: NSLayoutConstraint?
-    private var heightLayout: NSLayoutConstraint?
-
-
-    public init(center: CGPoint, leftSetting: LabelSwitchSetting, rightSetting: LabelSwitchSetting, circlePadding: CGFloat = 1, minimumSize: CGSize = .zero, defaultState: SwitchState = .L) {
-        self.leftSetting = leftSetting
-        self.rightSetting = rightSetting
+    public init(center: CGPoint,
+            leftConfig: LabelSwitchConfig,
+           rightConfig: LabelSwitchConfig,
+         circlePadding: CGFloat = 1,
+           minimumSize: CGSize = .zero,
+          defaultState: SwitchState = .L) {
+        
+        self.switchConfigL = leftConfig
+        self.switchConfigR = rightConfig
         self.circlePadding = circlePadding
         self.minimumSize = minimumSize
         self.curState = defaultState
+        
         super.init(frame: .zero)
         self.center = center
         clipsToBounds = true
-        addSubview(leftTextBackground)
-        addSubview(rightTextBackground)
-        addSubview(leftLabel)
-        addSubview(rightLabel)
-        addSubview(circleView)
         updateUI()
     }
 
     private func updateUI() {
-        setupBounds()
-        setupTextMask()
-        setupTextBackground()
-        setupBackgroundColor()
-        setupText()
-        setupCircle()
-        
+        calculateSize()
         switch curState {
-        case .L: updateUIState(leftUIState)
-        case .R: updateUIState(rightUIState)
+        case .L: updateUIState(stateL)
+        case .R: updateUIState(stateR)
         }
     }
     
     /// Calculate the bounds of the switch accourding to the label's text and font size
-    private func setupBounds () {
+    private func calculateSize () {
         let circleMinimumSize = minimumSize.height - 2 * circlePadding
-        let circleSize = max(circleMinimumSize, max(leftSetting.font.pointSize, rightSetting.font.pointSize) * 2)
+        let circleSize = max(circleMinimumSize, max(switchConfigL.font.pointSize, switchConfigR.font.pointSize) * 2)
         edge = circleSize * 0.2
-        leftLabel.text = leftSetting.text
-        leftLabel.font  = leftSetting.font
-        leftLabel.sizeToFit()
-        rightLabel.text = rightSetting.text
-        rightLabel.font = rightSetting.font
-        rightLabel.sizeToFit()
-        
-        let width = max(minimumSize.width, max(leftLabel.bounds.width, rightLabel.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
-        bounds = CGRect(x: 0, y: 0, width: width, height: circleSize + 2 * circlePadding)
-        layer.cornerRadius = bounds.height / 2
+       
+        let width = max(minimumSize.width, max(labelL.bounds.width, labelR.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
+        calculatedSize = CGSize(width: width, height: circleSize + 2 * circlePadding)
     }
 
-    
     /// Calculate the left frame and right frame for the circle
     private func setupCircle() {
-        let circleSize = bounds.height - 2 * circlePadding
-        circleView.backgroundColor = .white
-        circleView.layer.cornerRadius = circleSize / 2
-        circleView.layer.shadowColor = UIColor.black.cgColor
-        circleView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        circleView.layer.shadowOpacity = 0.5
+        let diameter = bounds.height - 2 * circlePadding
+        circleView.layer.cornerRadius = diameter / 2
         circleView.layer.shadowRadius = bounds.height * 0.05
+        let circleSize = CGSize(width: diameter, height: diameter)
         
-        let leftFrame  = CGRect(x: circlePadding,
-                                y: circlePadding,
-                                width: circleSize,
-                                height: circleSize)
+        stateL.circleFrame = CGRect(origin: CGPoint(x: circlePadding, y: circlePadding),
+                                      size: circleSize)
         
-        let rigthFrame = CGRect(x: bounds.width - circleSize - circlePadding,
-                                y: circlePadding,
-                                width: circleSize,
-                                height: circleSize)
-        
-        leftUIState.circleFrame = leftFrame
-        rightUIState.circleFrame = rigthFrame
-       
+        stateR.circleFrame = CGRect(origin: CGPoint(x: bounds.width - diameter - circlePadding, y: circlePadding),
+                                      size: circleSize)
         /// Add the touch event to the circle view
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchTaped(sender:))))
     }
     
-    
     /// Set the label's frame and color
-    private func setupText() {
-        leftLabel.bounds  = CGRect(x: 0,
-                                   y: 0,
-                                   width: leftLabel.bounds.width,
-                                   height: leftLabel.bounds.height)
+    private func setupLabel() {
+        labelL.center = CGPoint(x: (bounds.width - bounds.height + edge) / 2,
+                                y: bounds.height / 2)
         
-        rightLabel.bounds = CGRect(x: 0,
-                                   y: 0,
-                                   width: rightLabel.bounds.width,
-                                   height: rightLabel.bounds.height)
-        
-        
-        leftLabel.center  = CGPoint(x: (bounds.width - bounds.height) / 2 + edge / 2,
-                                    y: bounds.height / 2)
-        
-        rightLabel.center = CGPoint(x: (bounds.width + bounds.height) / 2 - edge / 2,
-                                    y: bounds.height / 2)
-        
-        
-        leftLabel.textColor  = leftSetting.textColor
-        rightLabel.textColor = rightSetting.textColor
-        leftLabel.textAlignment = .center
-        rightLabel.textAlignment = .center
+        labelR.center = CGPoint(x: (bounds.width + bounds.height - edge) / 2,
+                                y: bounds.height / 2)
     }
-    
     
     /// Set the frame for the text mask
     private func setupTextMask() {
-        leftUIState.leftTextMaskFrame  = CGRect(x: -bounds.width,
-                                                y: 0,
-                                                width: bounds.width,
-                                                height: bounds.height)
+        stateL.maskL.maskFrame = bounds.offsetBy(dx: -bounds.width, dy: 0)
+        stateL.maskR.maskFrame = bounds
         
-        leftUIState.rightTextMaskFrame = CGRect(x: 0,
-                                                y: 0,
-                                                width: bounds.width,
-                                                height: bounds.height)
-        
-        rightUIState.leftTextMaskFrame  = CGRect(x: 0,
-                                                 y: 0,
-                                                 width: bounds.width,
-                                                 height: bounds.height)
-        
-        rightUIState.rightTextMaskFrame = CGRect(x: bounds.width,
-                                                 y: 0,
-                                                 width: bounds.width,
-                                                 height: bounds.height)
-        
-        leftTextMask.backgroundColor = UIColor.black.cgColor
-        rightTextMask.backgroundColor = UIColor.black.cgColor
-        
-        leftLabel.layer.mask  = leftTextMask
-        rightLabel.layer.mask = rightTextMask
+        stateR.maskL.maskFrame = bounds
+        stateR.maskR.maskFrame = bounds.offsetBy(dx: bounds.width, dy: 0)
     }
     
-    
-    /// Set the frame for background, which has the same frame with the text mask
-    private func setupTextBackground() {
-        leftUIState.leftBgFrame  = leftUIState.leftTextMaskFrame
-        leftUIState.rightBgFrame = leftUIState.rightTextMaskFrame
-        
-        rightUIState.leftBgFrame  = rightUIState.leftTextMaskFrame
-        rightUIState.rightBgFrame = rightUIState.rightTextMaskFrame
-        
-        leftTextBackground.backgroundColor  = leftSetting.backgroundColor
-        rightTextBackground.backgroundColor = rightSetting.backgroundColor
-        
-        leftTextBackground.layer.cornerRadius  = bounds.height / 2
-        rightTextBackground.layer.cornerRadius = bounds.height / 2
-    }
-    
-    private func setupBackgroundColor() {
-        leftUIState.backgroundColor = leftSetting.backgroundColor
-        rightUIState.backgroundColor = rightSetting.backgroundColor
-    }
-
     /// Called when the circle is touched
-    @objc func switchTaped(sender: Any) {
+    @objc
+    func switchTaped(sender: Any) {
         UIView.animate(withDuration: 0.3) {
             switch self.curState {
             case .L:
@@ -298,31 +242,73 @@ struct TextTypeUIState {
     }
     
     ///  Update view's frame by UI state
-    private func updateUIState(_ state: TextTypeUIState) {
-        circleView.frame          = state.circleFrame
-        leftTextMask.frame        = state.leftTextMaskFrame
-        rightTextMask.frame       = state.rightTextMaskFrame
+    private func updateUIState(_ state: UIState) {
+        textMaskL.frame = state.maskL.maskFrame
+        textBackL.frame = state.maskL.backFrame
         
-        leftTextBackground.frame  = state.leftBgFrame
-        rightTextBackground.frame = state.rightBgFrame
+        textMaskR.frame = state.maskR.maskFrame
+        textBackR.frame = state.maskR.backFrame
+        
+        circleView.frame  = state.circleFrame
         backgroundColor = state.backgroundColor
     }
     
     
+    ///  For InterfaceBuilder
+    @IBInspectable var lBackColor: UIColor = .white {
+        didSet{
+            switchConfigL.backgroundColor = lBackColor
+        }
+    }
+    
+    @IBInspectable var rBackColor: UIColor = .white {
+        didSet{
+            switchConfigR.backgroundColor = rBackColor
+        }
+    }
+    
+    @IBInspectable var lTextColor: UIColor = .white {
+        didSet{
+            switchConfigL.textColor = lTextColor
+        }
+    }
+    
+    @IBInspectable var rTextColor: UIColor = .white {
+        didSet{
+            switchConfigR.textColor = rTextColor
+        }
+    }
+    
+    @IBInspectable var lText: String = "" {
+        didSet{
+            switchConfigL.text = lText
+        }
+    }
+    
+    @IBInspectable var rText: String = "" {
+        didSet{
+            switchConfigR.text = rText
+        }
+    }
+    
+    @IBInspectable var fontSize: CGFloat = 10 {
+        didSet{
+            switchConfigL.font = .systemFont(ofSize: fontSize)
+            switchConfigR.font = .systemFont(ofSize: fontSize)
+        }
+    }
+    
+    private var widthLayout: NSLayoutConstraint?
+    private var heightLayout: NSLayoutConstraint?
+    
     required public init?(coder aDecoder: NSCoder) {
-        self.leftSetting = LabelSwitchSetting.defaultLeft
-        self.rightSetting = LabelSwitchSetting.defaultRight
+        self.switchConfigL = LabelSwitchConfig.defaultLeft
+        self.switchConfigR = LabelSwitchConfig.defaultRight
         self.circlePadding = 1
         self.minimumSize = .zero
         self.curState = .L
         super.init(coder: aDecoder)
         clipsToBounds = true
-        addSubview(leftTextBackground)
-        addSubview(rightTextBackground)
-        addSubview(leftLabel)
-        addSubview(rightLabel)
-        addSubview(circleView)
-        
         updateUI()
         updateLayoutConstraint()
     }
