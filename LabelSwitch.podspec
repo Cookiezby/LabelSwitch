@@ -22,7 +22,6 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/Cookiezby/LabelSwitch'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'cookiezby@gmail.com' => 'cookiezby@gmail.com' }
   s.source           = { :git => 'https://github.com/Cookiezby/LabelSwitch.git', :tag => s.version.to_s }
