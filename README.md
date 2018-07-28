@@ -7,7 +7,7 @@
 
 <img src="sample.gif" width="112" height="61" />
 
-<img src= "sample2.png" width = "370", height = "476" />
+<img src= "sample2.png" width = "370" height = "476" />
 
 ## Installation
 
