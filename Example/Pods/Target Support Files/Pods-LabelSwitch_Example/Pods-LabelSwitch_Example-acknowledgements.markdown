@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## LabelSwitch
 
-Copyright (c) 2018 zhu.bingyi@donuts.ne.jp <zhu.bingyi@donuts.ne.jp>
+Copyright (c) 2018 cookiezby@gmail.com <cookiezby@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

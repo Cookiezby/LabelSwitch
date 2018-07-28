@@ -9,11 +9,20 @@
 import Foundation
 import UIKit
 
+
 public struct LabelSwitchConfig {
-    public var text: String
-    public var textColor: UIColor
-    public var font: UIFont
-    public var backgroundColor: UIColor
+    struct GradientBack {
+        var colors: [CGColor]
+        var startPoint: CGPoint
+        var endPoint: CGPoint
+    }
+
+    var text: String
+    var textColor: UIColor
+    var font: UIFont
+    var backgroundColor: UIColor
+    var backGradient: GradientBack?
+    var backImage: UIImage?
     
     public init(text: String, textColor: UIColor, font: UIFont, backgroundColor: UIColor) {
         self.text = text
@@ -22,18 +31,28 @@ public struct LabelSwitchConfig {
         self.backgroundColor = backgroundColor
     }
     
+    public init(text: String, textColor: UIColor, font: UIFont, gradientColors: [CGColor], startPoint: CGPoint, endPoint: CGPoint) {
+        self.init(text: text, textColor: textColor, font: font, backgroundColor: .white)
+        self.backGradient = GradientBack(colors: gradientColors, startPoint: startPoint, endPoint: endPoint)
+    }
+    
+    public init(text: String, textColor: UIColor, font: UIFont, image: UIImage?) {
+        self.init(text: text, textColor: textColor, font: font, backgroundColor: .white)
+        self.backImage = image
+    }
+    
     public static let defaultLeft = LabelSwitchConfig(text: "Left",
-                                                  textColor: .white,
-                                                  font: UIFont.boldSystemFont(ofSize: 20),
-                                                  backgroundColor: .green)
+                                                 textColor: .white,
+                                                      font: .boldSystemFont(ofSize: 20),
+                                           backgroundColor: UIColor.red)
     
     public static let defaultRight = LabelSwitchConfig(text: "Right",
-                                               textColor: .white,
-                                               font: UIFont.boldSystemFont(ofSize: 20),
-                                               backgroundColor: .red)
+                                                  textColor: .white,
+                                                       font: .boldSystemFont(ofSize: 20),
+                                            backgroundColor: UIColor.blue)
 }
 
-public enum SwitchState {
+public enum LabelSwitchState {
     case L
     case R
 }

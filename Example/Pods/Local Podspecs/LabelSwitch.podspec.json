@@ -1,6 +1,6 @@
 {
   "name": "LabelSwitch",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "summary": "Switch with label in background",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Cookiezby/LabelSwitch",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Cookiezby/LabelSwitch.git",
-    "tag": "0.1.2"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "9.0"

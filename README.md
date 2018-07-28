@@ -7,6 +7,8 @@
 
 <img src="sample.gif" width="112" height="61" />
 
+<img src= "sample2.png" width = "370", height = "476" />
+
 ## Installation
 
 LabelSwitch is available through [CocoaPods](http://cocoapods.org). To install
@@ -53,6 +55,15 @@ extension ViewController: LabelSwitchDelegate {
     }
 }
 
+```
+
+you can also make the switch background to be image or gradient color
+```
+// gradient color
+init(text: String, textColor: UIColor, font: UIFont, gradientColors: [CGColor], startPoint: CGPoint, endPoint: CGPoint)
+
+// image
+init(text: String, textColor: UIColor, font: UIFont, image: UIImage?)
 ```
 
 ## Author

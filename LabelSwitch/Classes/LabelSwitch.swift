@@ -10,23 +10,54 @@ import Foundation
 import UIKit
 
 public protocol  LabelSwitchDelegate : class {
-    func switchChangToState(_ state: SwitchState) -> Void
+    func switchChangToState(_ state: LabelSwitchState) -> Void
 }
 
-private struct MaskBack {
-    var maskFrame: CGRect = .zero
-    var backFrame: CGRect = .zero {
-        didSet {
-            maskFrame = backFrame
+private class LabelSwitchPart {
+    let label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 1
+        label.backgroundColor = .clear
+        return label
+    }()
+    
+    let back: LabelSwitchBackView = {
+        let view = LabelSwitchBackView()
+        return view
+    }()
+    
+    lazy var mask: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor.black.cgColor
+        label.layer.mask = layer
+        return layer
+    }()
+    
+    func setConfig(_ config: LabelSwitchConfig) {
+        back.backgroundColor = config.backgroundColor
+        label.textColor = config.textColor
+        label.text = config.text
+        label.font = config.font
+        label.sizeToFit()
+        
+        if let gradient = config.backGradient {
+            back.gradientLayer.colors = gradient.colors
+            back.gradientLayer.startPoint = gradient.startPoint
+            back.gradientLayer.endPoint = gradient.endPoint
+            back.gradientLayer.isHidden = false
+        }
+        
+        if let image = config.backImage {
+            back.imageView.image = image
+            back.imageView.isHidden = false
         }
     }
-}
-
-private struct UIState {
-    var backgroundColor:UIColor = .clear
-    var circleFrame:CGRect = .zero
-    var maskL = MaskBack()
-    var maskR = MaskBack()
+    
+    func setState(_ state: LabelSwitchPartState) {
+        mask.frame = state.backMaskFrame
+        back.frame = state.backMaskFrame
+    }
 }
 
 @IBDesignable public class LabelSwitch: UIView {
@@ -41,64 +72,30 @@ private struct UIState {
         return view
     }()
     
-    private lazy var textBackL: UIView = {
-        let view = UIView()
-        addSubview(view)
-        return view
+    private lazy var leftPart: LabelSwitchPart = {
+        let part = LabelSwitchPart()
+        addSubview(part.back)
+        addSubview(part.label)
+        return part
     }()
     
-    private lazy var textBackR: UIView = {
-        let view = UIView()
-        addSubview(view)
-        return view
+    private lazy var rightPart: LabelSwitchPart = {
+        let part = LabelSwitchPart()
+        addSubview(part.back)
+        addSubview(part.label)
+        return part
     }()
     
-    private lazy var textMaskL: CALayer = {
-        let layer = CALayer()
-        layer.backgroundColor = UIColor.black.cgColor
-        labelL.layer.mask = layer
-        return layer
-    }()
-    
-    private lazy var textMaskR: CALayer = {
-        let layer = CALayer()
-        layer.backgroundColor = UIColor.black.cgColor
-        labelR.layer.mask = layer
-        return layer
-    }()
-
-    private lazy var labelL: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        addSubview(label)
-        return label
-    }()
-    
-    private lazy var labelR: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        addSubview(label)
-        return label
-    }()
-    
-    private var switchConfigL: LabelSwitchConfig {
+    private var switchConfigL: LabelSwitchConfig! {
         didSet {
             stateL.backgroundColor     = switchConfigL.backgroundColor
-            textBackL.backgroundColor  = switchConfigL.backgroundColor
-            labelL.textColor           = switchConfigL.textColor
-            labelL.text                = switchConfigL.text
-            labelL.font                = switchConfigL.font
-            labelL.sizeToFit()
+            leftPart.setConfig(switchConfigL)
         }
     }
-    private var switchConfigR: LabelSwitchConfig {
+    private var switchConfigR: LabelSwitchConfig! {
         didSet {
             stateR.backgroundColor    = switchConfigR.backgroundColor
-            textBackR.backgroundColor = switchConfigR.backgroundColor
-            labelR.textColor          = switchConfigR.textColor
-            labelR.text               = switchConfigR.text
-            labelR.font               = switchConfigR.font
-            labelR.sizeToFit()
+            rightPart.setConfig(switchConfigR)
         }
     }
     
@@ -106,13 +103,13 @@ private struct UIState {
     private let circlePadding: CGFloat
     private let minimumSize: CGSize
     
-    private var stateL = UIState()
-    private var stateR = UIState()
+    private var stateL = LabelSwitchUIState()
+    private var stateR = LabelSwitchUIState()
     
     private var fullSizeTapGesture: UITapGestureRecognizer?
     
     public weak var delegate: LabelSwitchDelegate?
-    public var curState: SwitchState {
+    public var curState: LabelSwitchState {
         didSet{
             switch curState {
             case .L: updateUIState(stateL)
@@ -160,10 +157,8 @@ private struct UIState {
            rightConfig: LabelSwitchConfig,
          circlePadding: CGFloat = 1,
            minimumSize: CGSize = .zero,
-          defaultState: SwitchState = .L) {
-        
-        self.switchConfigL = leftConfig
-        self.switchConfigR = rightConfig
+          defaultState: LabelSwitchState = .L) {
+
         self.circlePadding = circlePadding
         self.minimumSize = minimumSize
         self.curState = defaultState
@@ -171,6 +166,7 @@ private struct UIState {
         super.init(frame: .zero)
         self.center = center
         clipsToBounds = true
+        setConfig(left: leftConfig, right: rightConfig)
         updateUI()
     }
 
@@ -188,7 +184,7 @@ private struct UIState {
         let circleSize = max(circleMinimumSize, max(switchConfigL.font.pointSize, switchConfigR.font.pointSize) * 2)
         edge = circleSize * 0.2
        
-        let width = max(minimumSize.width, max(labelL.bounds.width, labelR.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
+        let width = max(minimumSize.width, max(leftPart.label.bounds.width, rightPart.label.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
         calculatedSize = CGSize(width: width, height: circleSize + 2 * circlePadding)
     }
 
@@ -210,20 +206,25 @@ private struct UIState {
     
     /// Set the label's frame and color
     private func setupLabel() {
-        labelL.center = CGPoint(x: (bounds.width - bounds.height + edge) / 2,
-                                y: bounds.height / 2)
+        leftPart.label.center = CGPoint(x: (bounds.width - bounds.height + edge) / 2,
+                                        y: bounds.height / 2)
         
-        labelR.center = CGPoint(x: (bounds.width + bounds.height - edge) / 2,
-                                y: bounds.height / 2)
+        rightPart.label.center = CGPoint(x: (bounds.width + bounds.height - edge) / 2,
+                                         y: bounds.height / 2)
     }
     
     /// Set the frame for the text mask
     private func setupTextMask() {
-        stateL.maskL.maskFrame = bounds.offsetBy(dx: -bounds.width, dy: 0)
-        stateL.maskR.maskFrame = bounds
-        
-        stateR.maskL.maskFrame = bounds
-        stateR.maskR.maskFrame = bounds.offsetBy(dx: bounds.width, dy: 0)
+        stateL.leftPartState.backMaskFrame = bounds.offsetBy(dx: -bounds.width, dy: 0)
+        stateL.rightPartState.backMaskFrame = bounds
+
+        stateR.leftPartState.backMaskFrame = bounds
+        stateR.rightPartState.backMaskFrame = bounds.offsetBy(dx: bounds.width, dy: 0)
+    }
+    
+    private func setConfig(left: LabelSwitchConfig, right: LabelSwitchConfig) {
+        switchConfigL = left
+        switchConfigR = right
     }
     
     /// Called when the circle is touched
@@ -242,18 +243,14 @@ private struct UIState {
     }
     
     ///  Update view's frame by UI state
-    private func updateUIState(_ state: UIState) {
-        textMaskL.frame = state.maskL.maskFrame
-        textBackL.frame = state.maskL.backFrame
-        
-        textMaskR.frame = state.maskR.maskFrame
-        textBackR.frame = state.maskR.backFrame
-        
+    private func updateUIState(_ state: LabelSwitchUIState) {
+        leftPart.setState(state.leftPartState)
+        rightPart.setState(state.rightPartState)
         circleView.frame  = state.circleFrame
         backgroundColor = state.backgroundColor
     }
     
-    
+ 
     ///  For InterfaceBuilder
     @IBInspectable var lBackColor: UIColor = .white {
         didSet{
