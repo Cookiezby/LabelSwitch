@@ -21,18 +21,18 @@ pod 'LabelSwitch'
 You can create the view through code or InterfaceBuilder
 
 ```swift
-let ls = LabelSwtichSetting(text: "Text1",
-                       textColor: .white,
-                            font: UIFont.boldSystemFont(ofSize: 15),
-                 backgroundColor: .red)
+let ls = LabelSwitchConfig(text: "Text1",
+                      textColor: .white,
+                           font: UIFont.boldSystemFont(ofSize: 15),
+                backgroundColor: .red)
         
-let rs = LabelSwtichSetting(text: "Text2",
-                       textColor: .white,
-                            font: UIFont.boldSystemFont(ofSize: 20),
-                 backgroundColor: .green)
+let rs = LabelSwitchConfig(text: "Text2",
+                      textColor: .white,
+                           font: UIFont.boldSystemFont(ofSize: 20),
+                backgroundColor: .green)
 
 // Set the default state of the switch,
-let labelSwitch = LabelSwitch(center: .zero, leftSetting: ls, rightSetting: rs, defaultState: .L)
+let labelSwitch = LabelSwitch(center: .zero, leftConfig: ls, rightConfig: rs)
 
 // Set the appearance of the circle button
 labelSwitch.circleShadow = false
@@ -45,7 +45,7 @@ labelSwitch.fullSizeTapEnabled = true
 labelSwitch.delegate = self
 
 extension ViewController: LabelSwitchDelegate {
-    func switchChangToState(_ state: SwitchState) {
+    func switchChangToState(_ state: LabelSwitchState) {
         switch state {
             case .L: print("circle on left")
             case .R: print("circle on right")
