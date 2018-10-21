@@ -33,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07B96393FFE12F88B7BD8213A682A824 /* Pods_LabelSwitch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LabelSwitch_Example.framework; path = "Pods-LabelSwitch_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B96393FFE12F88B7BD8213A682A824 /* Pods_LabelSwitch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelSwitch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0828263E42738995C191AC7A73C5123C /* LabelSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.xcconfig; sourceTree = "<group>"; };
 		1474133DC36CDD07FE8C847A0DA27AA8 /* Pods-LabelSwitch_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LabelSwitch_Example.modulemap"; sourceTree = "<group>"; };
 		16BEE47B90383581C8C54C5D20A3B8B1 /* LabelSwitchBackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchBackView.swift; path = LabelSwitch/Classes/LabelSwitchBackView.swift; sourceTree = "<group>"; };
@@ -49,22 +49,22 @@
 		5A1CEEEDD14B30BFCBEA79DB0871D05B /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
 		5AB09630DA8BB6CD81E5DBEF9F9BB71A /* Pods-LabelSwitch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		5ABCA8679E78F38686B649A05004917F /* Pods-LabelSwitch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5CA6CCA12F73F883B092DF968921FBFC /* LabelSwitch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LabelSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5CA6CCA12F73F883B092DF968921FBFC /* LabelSwitch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = LabelSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75889631FC48A095FFE6877437D722CF /* Pods-LabelSwitch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Example-dummy.m"; sourceTree = "<group>"; };
-		7E0D5AC7810F61B1CDCA8375C9D840F8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7E0D5AC7810F61B1CDCA8375C9D840F8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		85532CEF5B09BEB574C06D2A4E0DEFA9 /* Pods-LabelSwitch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		87B79E9BC3CF97AE0B9B07DB9455E671 /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
 		929C9678E8D996D2D5754E830463D620 /* Pods-LabelSwitch_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DADC4E8700426611EE9E55634423AA8 /* Pods-LabelSwitch_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-resources.sh"; sourceTree = "<group>"; };
 		9E2FDD69F588031857BABDA406467AA8 /* Pods-LabelSwitch_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LabelSwitch_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9EB3AB7C81FFB08C4224320E31DD1938 /* Pods_LabelSwitch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LabelSwitch_Tests.framework; path = "Pods-LabelSwitch_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3B005FAA6E48D18C6128C54467FDF9A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9EB3AB7C81FFB08C4224320E31DD1938 /* Pods_LabelSwitch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelSwitch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B005FAA6E48D18C6128C54467FDF9A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C5951A5B67A49B51ADD4970703FBDC35 /* LabelSwitchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchState.swift; path = LabelSwitch/Classes/LabelSwitchState.swift; sourceTree = "<group>"; };
 		C7FF822F4E36F4AB474D2737DC6D1EA3 /* Pods-LabelSwitch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LabelSwitch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D1252FBBCE3AF12EC1EE2C86AEE8DD0F /* Pods-LabelSwitch_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LabelSwitch_Example-umbrella.h"; sourceTree = "<group>"; };
-		D7D4688CF46CDFDB6D23A25237B02BA5 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LabelSwitch.framework; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D4688CF46CDFDB6D23A25237B02BA5 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E94DF2C9C9CCA5B101992D5F45710F /* Pods-LabelSwitch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-resources.sh"; sourceTree = "<group>"; };
 		E48A2DC8B8B956500D8FD680F6C7E1E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E844930A4F8DA45EF572A67799F5BA99 /* Pods-LabelSwitch_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -497,7 +497,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -528,7 +528,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
