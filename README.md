@@ -45,8 +45,8 @@ labelSwitch.fullSizeTapEnabled = true
 labelSwitch.delegate = self
 
 extension ViewController: LabelSwitchDelegate {
-    func switchChangToState(_ state: LabelSwitchState) {
-        switch state {
+    func switchChangToState(sender: LabelSwitch) {
+        switch sender.curState {
             case .L: print("circle on left")
             case .R: print("circle on right")
         }
