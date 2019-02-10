@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public protocol  LabelSwitchDelegate : class {
-    func switchChangToState(_ state: LabelSwitchState) -> Void
+    func switchChangToState(sender: LabelSwitch) -> Void
 }
 
 private class LabelSwitchPart {
@@ -233,10 +233,10 @@ private class LabelSwitchPart {
         UIView.animate(withDuration: 0.3) {
             switch self.curState {
             case .L:
-                self.delegate?.switchChangToState(.R)
+                self.delegate?.switchChangToState(sender: self)
                 self.curState = .R
             case .R:
-                self.delegate?.switchChangToState(.L)
+                self.delegate?.switchChangToState(sender: self)
                 self.curState = .L
             }
         }
