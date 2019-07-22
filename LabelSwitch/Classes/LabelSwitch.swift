@@ -88,17 +88,17 @@ private class LabelSwitchPart {
     
     private var switchConfigL: LabelSwitchConfig! {
         didSet {
-            stateL.backgroundColor     = switchConfigL.backgroundColor
+            stateL.backgroundColor = switchConfigL.backgroundColor
             leftPart.setConfig(switchConfigL)
         }
     }
     private var switchConfigR: LabelSwitchConfig! {
         didSet {
-            stateR.backgroundColor    = switchConfigR.backgroundColor
+            stateR.backgroundColor = switchConfigR.backgroundColor
             rightPart.setConfig(switchConfigR)
         }
     }
-    
+
     private var edge: CGFloat = 0
     private let circlePadding: CGFloat
     private let minimumSize: CGSize
@@ -151,6 +151,10 @@ private class LabelSwitchPart {
             setupCircle()
         }
     }
+    
+    
+    ///  Enable the swith
+    public var isEnable: Bool = true
 
     public init(center: CGPoint,
             leftConfig: LabelSwitchConfig,
@@ -158,7 +162,7 @@ private class LabelSwitchPart {
          circlePadding: CGFloat = 1,
            minimumSize: CGSize = .zero,
           defaultState: LabelSwitchState = .L) {
-
+        
         self.circlePadding = circlePadding
         self.minimumSize = minimumSize
         self.curState = defaultState
@@ -169,7 +173,7 @@ private class LabelSwitchPart {
         setConfig(left: leftConfig, right: rightConfig)
         updateUI()
     }
-
+    
     private func updateUI() {
         calculateSize()
         switch curState {
@@ -229,7 +233,8 @@ private class LabelSwitchPart {
     
     /// Called when the circle is touched
     @objc
-    func switchTaped(sender: Any) {
+    private func switchTaped(sender: Any) {
+        guard isEnable else { return }
         UIView.animate(withDuration: 0.3) {
             switch self.curState {
             case .L:

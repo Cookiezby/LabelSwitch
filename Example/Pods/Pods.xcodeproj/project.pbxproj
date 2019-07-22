@@ -7,273 +7,292 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086216A4CEF2827CF0199E557FB5C967 /* Pods-LabelSwitch_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1252FBBCE3AF12EC1EE2C86AEE8DD0F /* Pods-LabelSwitch_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D097ABCAE92B0F215ED046A3027A194 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		1A6AD89631C6F6A6C0C75C97E463A4D3 /* LabelSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1CEEEDD14B30BFCBEA79DB0871D05B /* LabelSwitch.swift */; };
-		A6BE5CA9F7CFFE0717BD04AB57082DB5 /* LabelSwitchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9A0C9973AA5271530B8D07E1DC263 /* LabelSwitchConfig.swift */; };
-		B0233D86809B3A256D6BD10AA2D38A63 /* Pods-LabelSwitch_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE8F0BDCFC40AA12D2FB80E026384EE /* Pods-LabelSwitch_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7D7557017B025C832B55802EB80C2C9 /* Pods-LabelSwitch_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75889631FC48A095FFE6877437D722CF /* Pods-LabelSwitch_Example-dummy.m */; };
-		BAEDD653DA25D3D3E166E6D262D26EE1 /* LabelSwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5951A5B67A49B51ADD4970703FBDC35 /* LabelSwitchState.swift */; };
-		C6494DA76FFA32A76753E508DB4E172C /* LabelSwitchBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BEE47B90383581C8C54C5D20A3B8B1 /* LabelSwitchBackView.swift */; };
-		CB67FA75F5467527FA0089653C799A15 /* LabelSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87B79E9BC3CF97AE0B9B07DB9455E671 /* LabelSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5B459BD18A536CDB70D942822D74EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		E7587BC92E70ED602F3DC70DA84332D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		E79DC2AE4DDB371EA7FF3674A5E6255C /* Pods-LabelSwitch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E844930A4F8DA45EF572A67799F5BA99 /* Pods-LabelSwitch_Tests-dummy.m */; };
-		F034A807B2E8C99EEF65753423777BA0 /* LabelSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F365718E07BD936CCBFA337A61BC1983 /* LabelSwitch-dummy.m */; };
+		0C441C402FA427DEACCA96171FAA8FF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2C4D35BEBEBA54085DAD955F1202D48F /* Pods-LabelSwitch_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07823613874AB4737B31FCC55D945692 /* Pods-LabelSwitch_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A92BE1E35E41FE07FA3A8596CC18A41 /* Pods-LabelSwitch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC513A01D44D0E888E16C3B1CC1D55E /* Pods-LabelSwitch_Tests-dummy.m */; };
+		5FDA1E77CDE27BCFEF9076E8E7CFFDCB /* LabelSwitchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D88DB8BAA7DB336DEDB1590ECECC623 /* LabelSwitchConfig.swift */; };
+		76C9EA7ECAA0166B1827DC1075F46159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7BBBDC0B116D4AEEFAF6D75A77F5AED4 /* LabelSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D69A18B459BA0B76894F41AC1F6B7 /* LabelSwitch.swift */; };
+		A2CB4AD8D4E80ECD41F8E056C532B4AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A89C9C41AF1DEFA530C67D9F4D1C8DB0 /* Pods-LabelSwitch_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ABFC3069FCB8CFB1865566814C60EE /* Pods-LabelSwitch_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B46B87E3B3DC33ED90567ACF385F7FD6 /* LabelSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB60F71562CB8DA49E2984FEA2D2E74 /* LabelSwitch-dummy.m */; };
+		CF7015475FC5F85BD4600F3C43FEF17E /* LabelSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A9089CCE486A278A8F1FE143E83A943 /* LabelSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE81CAA8CFD4D78DCF52A3F8570AFD54 /* LabelSwitchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E7D2C8C1EBCA46816AFAC6FF7CA46 /* LabelSwitchState.swift */; };
+		E1345EE168B77BCF6408704EB65B50C0 /* LabelSwitchBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E303F1D30B58C5BD274C4BCC8C054F /* LabelSwitchBackView.swift */; };
+		EFD0004E5538A05999FFD0597521CFD3 /* Pods-LabelSwitch_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EBBC7B63886784757BB5615C21F466 /* Pods-LabelSwitch_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B4C44E01C66531D4D8386AE563C77AF6 /* PBXContainerItemProxy */ = {
+		748C9916E467CFB63D7EC5123DE021A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6B0DEC1DF8F9FFC47340AE0B6BAE928A;
-			remoteInfo = "Pods-LabelSwitch_Example";
-		};
-		CB817B214942F6901D047CD4C91482AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 032119AF7C35D46B67AD5E7A0BD4746A;
+			remoteGlobalIDString = AB8056924B3CA589F4D45BD504A62605;
 			remoteInfo = LabelSwitch;
+		};
+		A605FB8B5917A48E7A8A9D1E24037D23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B43E8692882B737D7B727E88161A76AF;
+			remoteInfo = "Pods-LabelSwitch_Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07B96393FFE12F88B7BD8213A682A824 /* Pods_LabelSwitch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelSwitch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0828263E42738995C191AC7A73C5123C /* LabelSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.xcconfig; sourceTree = "<group>"; };
-		1474133DC36CDD07FE8C847A0DA27AA8 /* Pods-LabelSwitch_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LabelSwitch_Example.modulemap"; sourceTree = "<group>"; };
-		16BEE47B90383581C8C54C5D20A3B8B1 /* LabelSwitchBackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchBackView.swift; path = LabelSwitch/Classes/LabelSwitchBackView.swift; sourceTree = "<group>"; };
-		1A68DCF101FAFD3AD8489463349EE9C7 /* Pods-LabelSwitch_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LabelSwitch_Tests.modulemap"; sourceTree = "<group>"; };
-		1AB9A0C9973AA5271530B8D07E1DC263 /* LabelSwitchConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchConfig.swift; path = LabelSwitch/Classes/LabelSwitchConfig.swift; sourceTree = "<group>"; };
-		21A898B285EB0E854C004921E876905E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EA2C0D4EF537BEA3365DC4AF70AA30F /* LabelSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-prefix.pch"; sourceTree = "<group>"; };
-		2F2C57322E747E7DA733EB2E56D8CF83 /* LabelSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LabelSwitch.modulemap; sourceTree = "<group>"; };
-		35C872487D4D9344D441F78598162A8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D8A7940725974801D9047BEB467250A /* Pods-LabelSwitch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4013D262C526BDCC1834E0AB735D5237 /* Pods-LabelSwitch_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LabelSwitch_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4BE8F0BDCFC40AA12D2FB80E026384EE /* Pods-LabelSwitch_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LabelSwitch_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5A1CEEEDD14B30BFCBEA79DB0871D05B /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
-		5AB09630DA8BB6CD81E5DBEF9F9BB71A /* Pods-LabelSwitch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		5ABCA8679E78F38686B649A05004917F /* Pods-LabelSwitch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5CA6CCA12F73F883B092DF968921FBFC /* LabelSwitch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = LabelSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		75889631FC48A095FFE6877437D722CF /* Pods-LabelSwitch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Example-dummy.m"; sourceTree = "<group>"; };
-		7E0D5AC7810F61B1CDCA8375C9D840F8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		85532CEF5B09BEB574C06D2A4E0DEFA9 /* Pods-LabelSwitch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		87B79E9BC3CF97AE0B9B07DB9455E671 /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
-		929C9678E8D996D2D5754E830463D620 /* Pods-LabelSwitch_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DADC4E8700426611EE9E55634423AA8 /* Pods-LabelSwitch_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-resources.sh"; sourceTree = "<group>"; };
-		9E2FDD69F588031857BABDA406467AA8 /* Pods-LabelSwitch_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LabelSwitch_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9EB3AB7C81FFB08C4224320E31DD1938 /* Pods_LabelSwitch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelSwitch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3B005FAA6E48D18C6128C54467FDF9A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C5951A5B67A49B51ADD4970703FBDC35 /* LabelSwitchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchState.swift; path = LabelSwitch/Classes/LabelSwitchState.swift; sourceTree = "<group>"; };
-		C7FF822F4E36F4AB474D2737DC6D1EA3 /* Pods-LabelSwitch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LabelSwitch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D1252FBBCE3AF12EC1EE2C86AEE8DD0F /* Pods-LabelSwitch_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LabelSwitch_Example-umbrella.h"; sourceTree = "<group>"; };
-		D7D4688CF46CDFDB6D23A25237B02BA5 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9E94DF2C9C9CCA5B101992D5F45710F /* Pods-LabelSwitch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-resources.sh"; sourceTree = "<group>"; };
-		E48A2DC8B8B956500D8FD680F6C7E1E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E844930A4F8DA45EF572A67799F5BA99 /* Pods-LabelSwitch_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Tests-dummy.m"; sourceTree = "<group>"; };
-		F365718E07BD936CCBFA337A61BC1983 /* LabelSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LabelSwitch-dummy.m"; sourceTree = "<group>"; };
-		FCD38A1C9D79EE4E8D22728AF2A9A89A /* Pods-LabelSwitch_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LabelSwitch_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FE437A92876DD6E93CEF24D544C31065 /* Pods-LabelSwitch_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0251E953FE2B8BA5375EBD45EFBE56A2 /* Pods-LabelSwitch_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LabelSwitch_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		04ABFC3069FCB8CFB1865566814C60EE /* Pods-LabelSwitch_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LabelSwitch_Tests-umbrella.h"; sourceTree = "<group>"; };
+		07823613874AB4737B31FCC55D945692 /* Pods-LabelSwitch_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LabelSwitch_Example-umbrella.h"; sourceTree = "<group>"; };
+		0EA6771816A9FB3BB1F1C3FA381D4C4A /* Pods_LabelSwitch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LabelSwitch_Tests.framework; path = "Pods-LabelSwitch_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		188E7D2C8C1EBCA46816AFAC6FF7CA46 /* LabelSwitchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchState.swift; path = LabelSwitch/Classes/LabelSwitchState.swift; sourceTree = "<group>"; };
+		18E303F1D30B58C5BD274C4BCC8C054F /* LabelSwitchBackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchBackView.swift; path = LabelSwitch/Classes/LabelSwitchBackView.swift; sourceTree = "<group>"; };
+		23D0B479F93D8FAA61F40E5FE5B4C4E7 /* LabelSwitch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LabelSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		249D9F887471F5EFFB1C83B6FCD60BF5 /* Pods-LabelSwitch_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LabelSwitch_Example.modulemap"; sourceTree = "<group>"; };
+		26AB0C62DD2220122C2B1CE53E82B723 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FC2B739E704E1CC7C6063804274FE39 /* Pods-LabelSwitch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		42EBBC7B63886784757BB5615C21F466 /* Pods-LabelSwitch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Example-dummy.m"; sourceTree = "<group>"; };
+		4422D6DD56DB3CF6ADBF7F75AD1552E7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4846AC02BA6291000CCF91FDC719E4AA /* Pods-LabelSwitch_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-frameworks.sh"; sourceTree = "<group>"; };
+		4A9089CCE486A278A8F1FE143E83A943 /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
+		51D7A21F9F984791792E8E2182FAFF0B /* Pods-LabelSwitch_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-resources.sh"; sourceTree = "<group>"; };
+		5CC513A01D44D0E888E16C3B1CC1D55E /* Pods-LabelSwitch_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LabelSwitch_Tests-dummy.m"; sourceTree = "<group>"; };
+		6BB60F71562CB8DA49E2984FEA2D2E74 /* LabelSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LabelSwitch-dummy.m"; sourceTree = "<group>"; };
+		743216E9C30A5CF806E64FE98A72CCD9 /* Pods-LabelSwitch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LabelSwitch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		75612E471299BE2292EB5CC18662CCE6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD2466691EAE526387241752D50C7B1 /* LabelSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LabelSwitch.modulemap; sourceTree = "<group>"; };
+		7D88DB8BAA7DB336DEDB1590ECECC623 /* LabelSwitchConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitchConfig.swift; path = LabelSwitch/Classes/LabelSwitchConfig.swift; sourceTree = "<group>"; };
+		81036263F2862DFE4350A3D4499AF9D2 /* LabelSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.xcconfig; sourceTree = "<group>"; };
+		88F4CDBAD3B899A64737FE561C7589E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B5A9A81AB87F80F860378A3313E150B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		925311367F0B9E8757E76AC540BFB381 /* Pods-LabelSwitch_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Example-resources.sh"; sourceTree = "<group>"; };
+		9B4DE137E1C19DD0C734CFB52DDD7C41 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LabelSwitch.framework; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB189540C81BEBD2D5DDB53DD2CAC45C /* Pods-LabelSwitch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LabelSwitch_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		AECC3B786D76993FC7FD427AF7CF2797 /* Pods-LabelSwitch_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LabelSwitch_Tests.modulemap"; sourceTree = "<group>"; };
+		B96D69A18B459BA0B76894F41AC1F6B7 /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
+		BE3F1EDFD60F86780B585137A7E66C6B /* Pods-LabelSwitch_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEC9E130B962E35F4E07B3F62D060555 /* Pods_LabelSwitch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LabelSwitch_Example.framework; path = "Pods-LabelSwitch_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0CFB0383D99D2A0E0BAA06AF4EFA521 /* Pods-LabelSwitch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C1358DD888DFEB1EB462C5576D42CD8F /* LabelSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-prefix.pch"; sourceTree = "<group>"; };
+		CA8C1E19E55A461E966EFFED9DA8144F /* Pods-LabelSwitch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LabelSwitch_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DFCEFF08264AFA43D91C7E6B23303778 /* Pods-LabelSwitch_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LabelSwitch_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FBD08AE259DDC3001176FD9B7A0FBBCB /* Pods-LabelSwitch_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LabelSwitch_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2B43954AAB9DFF6A05FE5BFC10FFB334 /* Frameworks */ = {
+		0B1A27D42850EF982173DCBBA74D3CE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5B459BD18A536CDB70D942822D74EDD /* Foundation.framework in Frameworks */,
+				A2CB4AD8D4E80ECD41F8E056C532B4AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D539868FC1D923ABE6C2FB84154D29A /* Frameworks */ = {
+		5C6D7A5CC505ABD28EE9BEDBF5CDA534 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7587BC92E70ED602F3DC70DA84332D9 /* Foundation.framework in Frameworks */,
+				76C9EA7ECAA0166B1827DC1075F46159 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6603DAFB10CB8962407E6D5884A8DC8B /* Frameworks */ = {
+		9A22E2C1FD49082780B222DCB95B17EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D097ABCAE92B0F215ED046A3027A194 /* Foundation.framework in Frameworks */,
+				0C441C402FA427DEACCA96171FAA8FF1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04A1FC6B4ED78352D46DA3E4E838D2F7 /* Products */ = {
+		248662F3CCC7369B8E43DEDFBA7ACCC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7D4688CF46CDFDB6D23A25237B02BA5 /* LabelSwitch.framework */,
-				07B96393FFE12F88B7BD8213A682A824 /* Pods_LabelSwitch_Example.framework */,
-				9EB3AB7C81FFB08C4224320E31DD1938 /* Pods_LabelSwitch_Tests.framework */,
+				9B4DE137E1C19DD0C734CFB52DDD7C41 /* LabelSwitch.framework */,
+				BEC9E130B962E35F4E07B3F62D060555 /* Pods_LabelSwitch_Example.framework */,
+				0EA6771816A9FB3BB1F1C3FA381D4C4A /* Pods_LabelSwitch_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0BB46E2A88779580742F2C2BE1B1D3F6 /* Pods-LabelSwitch_Example */ = {
+		53B0349AC56108E2B7C9B24F6297D83D /* Pods-LabelSwitch_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E48A2DC8B8B956500D8FD680F6C7E1E5 /* Info.plist */,
-				1474133DC36CDD07FE8C847A0DA27AA8 /* Pods-LabelSwitch_Example.modulemap */,
-				C7FF822F4E36F4AB474D2737DC6D1EA3 /* Pods-LabelSwitch_Example-acknowledgements.markdown */,
-				4013D262C526BDCC1834E0AB735D5237 /* Pods-LabelSwitch_Example-acknowledgements.plist */,
-				75889631FC48A095FFE6877437D722CF /* Pods-LabelSwitch_Example-dummy.m */,
-				929C9678E8D996D2D5754E830463D620 /* Pods-LabelSwitch_Example-frameworks.sh */,
-				9DADC4E8700426611EE9E55634423AA8 /* Pods-LabelSwitch_Example-resources.sh */,
-				D1252FBBCE3AF12EC1EE2C86AEE8DD0F /* Pods-LabelSwitch_Example-umbrella.h */,
-				5ABCA8679E78F38686B649A05004917F /* Pods-LabelSwitch_Example.debug.xcconfig */,
-				3D8A7940725974801D9047BEB467250A /* Pods-LabelSwitch_Example.release.xcconfig */,
-			);
-			name = "Pods-LabelSwitch_Example";
-			path = "Target Support Files/Pods-LabelSwitch_Example";
-			sourceTree = "<group>";
-		};
-		333A297D4BF3B31D8A07135395BA4A7B /* Pods-LabelSwitch_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				35C872487D4D9344D441F78598162A8C /* Info.plist */,
-				1A68DCF101FAFD3AD8489463349EE9C7 /* Pods-LabelSwitch_Tests.modulemap */,
-				FCD38A1C9D79EE4E8D22728AF2A9A89A /* Pods-LabelSwitch_Tests-acknowledgements.markdown */,
-				9E2FDD69F588031857BABDA406467AA8 /* Pods-LabelSwitch_Tests-acknowledgements.plist */,
-				E844930A4F8DA45EF572A67799F5BA99 /* Pods-LabelSwitch_Tests-dummy.m */,
-				5AB09630DA8BB6CD81E5DBEF9F9BB71A /* Pods-LabelSwitch_Tests-frameworks.sh */,
-				D9E94DF2C9C9CCA5B101992D5F45710F /* Pods-LabelSwitch_Tests-resources.sh */,
-				4BE8F0BDCFC40AA12D2FB80E026384EE /* Pods-LabelSwitch_Tests-umbrella.h */,
-				FE437A92876DD6E93CEF24D544C31065 /* Pods-LabelSwitch_Tests.debug.xcconfig */,
-				85532CEF5B09BEB574C06D2A4E0DEFA9 /* Pods-LabelSwitch_Tests.release.xcconfig */,
+				26AB0C62DD2220122C2B1CE53E82B723 /* Info.plist */,
+				AECC3B786D76993FC7FD427AF7CF2797 /* Pods-LabelSwitch_Tests.modulemap */,
+				DFCEFF08264AFA43D91C7E6B23303778 /* Pods-LabelSwitch_Tests-acknowledgements.markdown */,
+				0251E953FE2B8BA5375EBD45EFBE56A2 /* Pods-LabelSwitch_Tests-acknowledgements.plist */,
+				5CC513A01D44D0E888E16C3B1CC1D55E /* Pods-LabelSwitch_Tests-dummy.m */,
+				AB189540C81BEBD2D5DDB53DD2CAC45C /* Pods-LabelSwitch_Tests-frameworks.sh */,
+				51D7A21F9F984791792E8E2182FAFF0B /* Pods-LabelSwitch_Tests-resources.sh */,
+				04ABFC3069FCB8CFB1865566814C60EE /* Pods-LabelSwitch_Tests-umbrella.h */,
+				BE3F1EDFD60F86780B585137A7E66C6B /* Pods-LabelSwitch_Tests.debug.xcconfig */,
+				CA8C1E19E55A461E966EFFED9DA8144F /* Pods-LabelSwitch_Tests.release.xcconfig */,
 			);
 			name = "Pods-LabelSwitch_Tests";
 			path = "Target Support Files/Pods-LabelSwitch_Tests";
 			sourceTree = "<group>";
 		};
-		3B9EC5560FAF5DB8D607D0B31BE7DDE1 /* Support Files */ = {
+		66B587D24F07CF8EFC06F4E7131AD079 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				21A898B285EB0E854C004921E876905E /* Info.plist */,
-				2F2C57322E747E7DA733EB2E56D8CF83 /* LabelSwitch.modulemap */,
-				0828263E42738995C191AC7A73C5123C /* LabelSwitch.xcconfig */,
-				F365718E07BD936CCBFA337A61BC1983 /* LabelSwitch-dummy.m */,
-				2EA2C0D4EF537BEA3365DC4AF70AA30F /* LabelSwitch-prefix.pch */,
-				87B79E9BC3CF97AE0B9B07DB9455E671 /* LabelSwitch-umbrella.h */,
+				23D0B479F93D8FAA61F40E5FE5B4C4E7 /* LabelSwitch.podspec */,
+				4422D6DD56DB3CF6ADBF7F75AD1552E7 /* LICENSE */,
+				8B5A9A81AB87F80F860378A3313E150B /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		76204627F38640400DDF7AB23B8B9D4C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75612E471299BE2292EB5CC18662CCE6 /* Info.plist */,
+				7AD2466691EAE526387241752D50C7B1 /* LabelSwitch.modulemap */,
+				81036263F2862DFE4350A3D4499AF9D2 /* LabelSwitch.xcconfig */,
+				6BB60F71562CB8DA49E2984FEA2D2E74 /* LabelSwitch-dummy.m */,
+				C1358DD888DFEB1EB462C5576D42CD8F /* LabelSwitch-prefix.pch */,
+				4A9089CCE486A278A8F1FE143E83A943 /* LabelSwitch-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/LabelSwitch";
 			sourceTree = "<group>";
 		};
-		555C2B2A9A4C89990681A255CFD6BC1D /* Pod */ = {
+		7858329CCD2F52DA34E4E6BE00CAB943 /* Pods-LabelSwitch_Example */ = {
 			isa = PBXGroup;
 			children = (
-				5CA6CCA12F73F883B092DF968921FBFC /* LabelSwitch.podspec */,
-				7E0D5AC7810F61B1CDCA8375C9D840F8 /* LICENSE */,
-				B3B005FAA6E48D18C6128C54467FDF9A /* README.md */,
+				88F4CDBAD3B899A64737FE561C7589E8 /* Info.plist */,
+				249D9F887471F5EFFB1C83B6FCD60BF5 /* Pods-LabelSwitch_Example.modulemap */,
+				743216E9C30A5CF806E64FE98A72CCD9 /* Pods-LabelSwitch_Example-acknowledgements.markdown */,
+				FBD08AE259DDC3001176FD9B7A0FBBCB /* Pods-LabelSwitch_Example-acknowledgements.plist */,
+				42EBBC7B63886784757BB5615C21F466 /* Pods-LabelSwitch_Example-dummy.m */,
+				4846AC02BA6291000CCF91FDC719E4AA /* Pods-LabelSwitch_Example-frameworks.sh */,
+				925311367F0B9E8757E76AC540BFB381 /* Pods-LabelSwitch_Example-resources.sh */,
+				07823613874AB4737B31FCC55D945692 /* Pods-LabelSwitch_Example-umbrella.h */,
+				C0CFB0383D99D2A0E0BAA06AF4EFA521 /* Pods-LabelSwitch_Example.debug.xcconfig */,
+				2FC2B739E704E1CC7C6063804274FE39 /* Pods-LabelSwitch_Example.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Pods-LabelSwitch_Example";
+			path = "Target Support Files/Pods-LabelSwitch_Example";
 			sourceTree = "<group>";
 		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+		8B0AEE02DDAAD2271AB540877CA28B13 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+				7858329CCD2F52DA34E4E6BE00CAB943 /* Pods-LabelSwitch_Example */,
+				53B0349AC56108E2B7C9B24F6297D83D /* Pods-LabelSwitch_Tests */,
 			);
-			name = iOS;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		ACC9C7B7C234883017D1946CCE625DA3 /* LabelSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				E577BCE7BB77FE44AC723AD0E8EA7204 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				04A1FC6B4ED78352D46DA3E4E838D2F7 /* Products */,
-				E7CB9F34C3E73B785286D670FC8AD426 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		99885210B32FDFA73B1403B8D5C65C06 /* LabelSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				5A1CEEEDD14B30BFCBEA79DB0871D05B /* LabelSwitch.swift */,
-				16BEE47B90383581C8C54C5D20A3B8B1 /* LabelSwitchBackView.swift */,
-				1AB9A0C9973AA5271530B8D07E1DC263 /* LabelSwitchConfig.swift */,
-				C5951A5B67A49B51ADD4970703FBDC35 /* LabelSwitchState.swift */,
-				555C2B2A9A4C89990681A255CFD6BC1D /* Pod */,
-				3B9EC5560FAF5DB8D607D0B31BE7DDE1 /* Support Files */,
+				B96D69A18B459BA0B76894F41AC1F6B7 /* LabelSwitch.swift */,
+				18E303F1D30B58C5BD274C4BCC8C054F /* LabelSwitchBackView.swift */,
+				7D88DB8BAA7DB336DEDB1590ECECC623 /* LabelSwitchConfig.swift */,
+				188E7D2C8C1EBCA46816AFAC6FF7CA46 /* LabelSwitchState.swift */,
+				66B587D24F07CF8EFC06F4E7131AD079 /* Pod */,
+				76204627F38640400DDF7AB23B8B9D4C /* Support Files */,
 			);
 			name = LabelSwitch;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				24390EFD555DD124430DFF9724065945 /* Podfile */,
+				E68BAC195E13D00957797A22ADD339FA /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				248662F3CCC7369B8E43DEDFBA7ACCC5 /* Products */,
+				8B0AEE02DDAAD2271AB540877CA28B13 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E577BCE7BB77FE44AC723AD0E8EA7204 /* Development Pods */ = {
+		E68BAC195E13D00957797A22ADD339FA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				99885210B32FDFA73B1403B8D5C65C06 /* LabelSwitch */,
+				ACC9C7B7C234883017D1946CCE625DA3 /* LabelSwitch */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		E7CB9F34C3E73B785286D670FC8AD426 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0BB46E2A88779580742F2C2BE1B1D3F6 /* Pods-LabelSwitch_Example */,
-				333A297D4BF3B31D8A07135395BA4A7B /* Pods-LabelSwitch_Tests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		13930AE3BDCBB7D422BD87A4D1FF1A06 /* Headers */ = {
+		14570BD5AF2AF3EA7472A84CB30E0DA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB67FA75F5467527FA0089653C799A15 /* LabelSwitch-umbrella.h in Headers */,
+				A89C9C41AF1DEFA530C67D9F4D1C8DB0 /* Pods-LabelSwitch_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82BFA0E34AFCD011089D6416BF1E45E1 /* Headers */ = {
+		4DA345B8A02AABE9472ADB06634689B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086216A4CEF2827CF0199E557FB5C967 /* Pods-LabelSwitch_Example-umbrella.h in Headers */,
+				2C4D35BEBEBA54085DAD955F1202D48F /* Pods-LabelSwitch_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BB6986C9DC222B3862E982392791C68 /* Headers */ = {
+		55A83B3AA5227270AD18DC050A6AAB56 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0233D86809B3A256D6BD10AA2D38A63 /* Pods-LabelSwitch_Tests-umbrella.h in Headers */,
+				CF7015475FC5F85BD4600F3C43FEF17E /* LabelSwitch-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		032119AF7C35D46B67AD5E7A0BD4746A /* LabelSwitch */ = {
+		0F02F57CC0272755AB3A2047D8EBCE6D /* Pods-LabelSwitch_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9958FAD8B512678F1B9C2701C46CD49 /* Build configuration list for PBXNativeTarget "LabelSwitch" */;
+			buildConfigurationList = 022F80C63D738F13A3E5946B75C11586 /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Tests" */;
 			buildPhases = (
-				13930AE3BDCBB7D422BD87A4D1FF1A06 /* Headers */,
-				F252B031FF53B6BB3655C8AACDF4D26D /* Sources */,
-				2B43954AAB9DFF6A05FE5BFC10FFB334 /* Frameworks */,
-				B72FFB16D9D1E35CBE397D601C42A3D4 /* Resources */,
+				14570BD5AF2AF3EA7472A84CB30E0DA9 /* Headers */,
+				AAF0D0272C107AD8449E4CC98B1FFA4A /* Sources */,
+				0B1A27D42850EF982173DCBBA74D3CE7 /* Frameworks */,
+				C3768F301A49AEF99722F134B6D9B758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7014358957C7105CDA079E1AA01487B /* PBXTargetDependency */,
+			);
+			name = "Pods-LabelSwitch_Tests";
+			productName = "Pods-LabelSwitch_Tests";
+			productReference = 0EA6771816A9FB3BB1F1C3FA381D4C4A /* Pods_LabelSwitch_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AB8056924B3CA589F4D45BD504A62605 /* LabelSwitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1454827286BB933089E84B8A560F4113 /* Build configuration list for PBXNativeTarget "LabelSwitch" */;
+			buildPhases = (
+				55A83B3AA5227270AD18DC050A6AAB56 /* Headers */,
+				D6988259120CA6D3E8D2E001F4249AEC /* Sources */,
+				9A22E2C1FD49082780B222DCB95B17EE /* Frameworks */,
+				E36881EB19026F514A039FA9A908DD4F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -281,97 +300,72 @@
 			);
 			name = LabelSwitch;
 			productName = LabelSwitch;
-			productReference = D7D4688CF46CDFDB6D23A25237B02BA5 /* LabelSwitch.framework */;
+			productReference = 9B4DE137E1C19DD0C734CFB52DDD7C41 /* LabelSwitch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		32E2166E9A56BC67EF1865CCB5FCB5A3 /* Pods-LabelSwitch_Tests */ = {
+		B43E8692882B737D7B727E88161A76AF /* Pods-LabelSwitch_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F38F4584C0869E1C7A6152CF511B92A /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Tests" */;
+			buildConfigurationList = F9DD69A6C6EED9750169025D655D9F9D /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Example" */;
 			buildPhases = (
-				9BB6986C9DC222B3862E982392791C68 /* Headers */,
-				8A294DE8497FAD7F5849D184687F8A49 /* Sources */,
-				4D539868FC1D923ABE6C2FB84154D29A /* Frameworks */,
-				4D1756A61D65F83EB7B52B39FB0A831A /* Resources */,
+				4DA345B8A02AABE9472ADB06634689B6 /* Headers */,
+				3AA855A734BDFBD74F648F494362B413 /* Sources */,
+				5C6D7A5CC505ABD28EE9BEDBF5CDA534 /* Frameworks */,
+				B73062842902D2DB6984F6AB1C79F8B3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5C1A2CE848173CA67BDC7505D9481B43 /* PBXTargetDependency */,
-			);
-			name = "Pods-LabelSwitch_Tests";
-			productName = "Pods-LabelSwitch_Tests";
-			productReference = 9EB3AB7C81FFB08C4224320E31DD1938 /* Pods_LabelSwitch_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6B0DEC1DF8F9FFC47340AE0B6BAE928A /* Pods-LabelSwitch_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AC2693F86F8DCA12730920535C4A3CD /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Example" */;
-			buildPhases = (
-				82BFA0E34AFCD011089D6416BF1E45E1 /* Headers */,
-				C2DE0ACFC0EC82479E27801091D48597 /* Sources */,
-				6603DAFB10CB8962407E6D5884A8DC8B /* Frameworks */,
-				72F95D494EB5EB9609A1F9684976731B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4172CC111A21B134BB56F3E981555542 /* PBXTargetDependency */,
+				1FC069C870693B64FF623270618003C2 /* PBXTargetDependency */,
 			);
 			name = "Pods-LabelSwitch_Example";
 			productName = "Pods-LabelSwitch_Example";
-			productReference = 07B96393FFE12F88B7BD8213A682A824 /* Pods_LabelSwitch_Example.framework */;
+			productReference = BEC9E130B962E35F4E07B3F62D060555 /* Pods_LabelSwitch_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					032119AF7C35D46B67AD5E7A0BD4746A = {
-						LastSwiftMigration = 1020;
-					};
-				};
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 04A1FC6B4ED78352D46DA3E4E838D2F7 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 248662F3CCC7369B8E43DEDFBA7ACCC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				032119AF7C35D46B67AD5E7A0BD4746A /* LabelSwitch */,
-				6B0DEC1DF8F9FFC47340AE0B6BAE928A /* Pods-LabelSwitch_Example */,
-				32E2166E9A56BC67EF1865CCB5FCB5A3 /* Pods-LabelSwitch_Tests */,
+				AB8056924B3CA589F4D45BD504A62605 /* LabelSwitch */,
+				B43E8692882B737D7B727E88161A76AF /* Pods-LabelSwitch_Example */,
+				0F02F57CC0272755AB3A2047D8EBCE6D /* Pods-LabelSwitch_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4D1756A61D65F83EB7B52B39FB0A831A /* Resources */ = {
+		B73062842902D2DB6984F6AB1C79F8B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72F95D494EB5EB9609A1F9684976731B /* Resources */ = {
+		C3768F301A49AEF99722F134B6D9B758 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B72FFB16D9D1E35CBE397D601C42A3D4 /* Resources */ = {
+		E36881EB19026F514A039FA9A908DD4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,55 +375,90 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8A294DE8497FAD7F5849D184687F8A49 /* Sources */ = {
+		3AA855A734BDFBD74F648F494362B413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E79DC2AE4DDB371EA7FF3674A5E6255C /* Pods-LabelSwitch_Tests-dummy.m in Sources */,
+				EFD0004E5538A05999FFD0597521CFD3 /* Pods-LabelSwitch_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2DE0ACFC0EC82479E27801091D48597 /* Sources */ = {
+		AAF0D0272C107AD8449E4CC98B1FFA4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7D7557017B025C832B55802EB80C2C9 /* Pods-LabelSwitch_Example-dummy.m in Sources */,
+				3A92BE1E35E41FE07FA3A8596CC18A41 /* Pods-LabelSwitch_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F252B031FF53B6BB3655C8AACDF4D26D /* Sources */ = {
+		D6988259120CA6D3E8D2E001F4249AEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F034A807B2E8C99EEF65753423777BA0 /* LabelSwitch-dummy.m in Sources */,
-				1A6AD89631C6F6A6C0C75C97E463A4D3 /* LabelSwitch.swift in Sources */,
-				C6494DA76FFA32A76753E508DB4E172C /* LabelSwitchBackView.swift in Sources */,
-				A6BE5CA9F7CFFE0717BD04AB57082DB5 /* LabelSwitchConfig.swift in Sources */,
-				BAEDD653DA25D3D3E166E6D262D26EE1 /* LabelSwitchState.swift in Sources */,
+				B46B87E3B3DC33ED90567ACF385F7FD6 /* LabelSwitch-dummy.m in Sources */,
+				7BBBDC0B116D4AEEFAF6D75A77F5AED4 /* LabelSwitch.swift in Sources */,
+				E1345EE168B77BCF6408704EB65B50C0 /* LabelSwitchBackView.swift in Sources */,
+				5FDA1E77CDE27BCFEF9076E8E7CFFDCB /* LabelSwitchConfig.swift in Sources */,
+				DE81CAA8CFD4D78DCF52A3F8570AFD54 /* LabelSwitchState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4172CC111A21B134BB56F3E981555542 /* PBXTargetDependency */ = {
+		1FC069C870693B64FF623270618003C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LabelSwitch;
-			target = 032119AF7C35D46B67AD5E7A0BD4746A /* LabelSwitch */;
-			targetProxy = CB817B214942F6901D047CD4C91482AE /* PBXContainerItemProxy */;
+			target = AB8056924B3CA589F4D45BD504A62605 /* LabelSwitch */;
+			targetProxy = 748C9916E467CFB63D7EC5123DE021A4 /* PBXContainerItemProxy */;
 		};
-		5C1A2CE848173CA67BDC7505D9481B43 /* PBXTargetDependency */ = {
+		C7014358957C7105CDA079E1AA01487B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LabelSwitch_Example";
-			target = 6B0DEC1DF8F9FFC47340AE0B6BAE928A /* Pods-LabelSwitch_Example */;
-			targetProxy = B4C44E01C66531D4D8386AE563C77AF6 /* PBXContainerItemProxy */;
+			target = B43E8692882B737D7B727E88161A76AF /* Pods-LabelSwitch_Example */;
+			targetProxy = A605FB8B5917A48E7A8A9D1E24037D23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04832210AFCEE38AAF489A34264ADCCD /* Debug */ = {
+		05F06546B4BBB522186E69DCD60F365C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0828263E42738995C191AC7A73C5123C /* LabelSwitch.xcconfig */;
+			baseConfigurationReference = CA8C1E19E55A461E966EFFED9DA8144F /* Pods-LabelSwitch_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LabelSwitch_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LabelSwitch_Tests/Pods-LabelSwitch_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		10704DCB43DCF63AD88AD400A7941A25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81036263F2862DFE4350A3D4499AF9D2 /* LabelSwitch.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -451,17 +480,17 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		23BC4CC3FFADE6D8F52EF5DABF6A6D0E /* Release */ = {
+		1192607E47348720B3D7C874B9202B22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D8A7940725974801D9047BEB467250A /* Pods-LabelSwitch_Example.release.xcconfig */;
+			baseConfigurationReference = 2FC2B739E704E1CC7C6063804274FE39 /* Pods-LabelSwitch_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -487,7 +516,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -495,9 +523,9 @@
 			};
 			name = Release;
 		};
-		487268F694CDDF36FCD852BA58D6BAC7 /* Debug */ = {
+		18687ED226762F463914F072C7DBFB78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE437A92876DD6E93CEF24D544C31065 /* Pods-LabelSwitch_Tests.debug.xcconfig */;
+			baseConfigurationReference = BE3F1EDFD60F86780B585137A7E66C6B /* Pods-LabelSwitch_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -529,9 +557,9 @@
 			};
 			name = Debug;
 		};
-		9CFC2F85C35C70AF6AAE1E833499FAD9 /* Debug */ = {
+		201568E1E9464BB3F2AE1DFDC90F2264 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ABCA8679E78F38686B649A05004917F /* Pods-LabelSwitch_Example.debug.xcconfig */;
+			baseConfigurationReference = C0CFB0383D99D2A0E0BAA06AF4EFA521 /* Pods-LabelSwitch_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -557,48 +585,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		A5C2A33F57EFEA46B654E6561FB1F40C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0828263E42738995C191AC7A73C5123C /* LabelSwitch.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LabelSwitch/LabelSwitch-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LabelSwitch/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LabelSwitch/LabelSwitch.modulemap";
-				PRODUCT_MODULE_NAME = LabelSwitch;
-				PRODUCT_NAME = LabelSwitch;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
+		896F3DECC5B7D1933ED94888FDBD28A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -658,11 +651,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		EA8C7AF90938697605468604B2A17B9F /* Release */ = {
+		DDA4D00F359F3EE6857483E5E13609E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81036263F2862DFE4350A3D4499AF9D2 /* LabelSwitch.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LabelSwitch/LabelSwitch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LabelSwitch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LabelSwitch/LabelSwitch.modulemap";
+				PRODUCT_MODULE_NAME = LabelSwitch;
+				PRODUCT_NAME = LabelSwitch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA4C7FFA184E32295CA3F8212537CB31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -717,85 +743,53 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		FA8EEE4E62DB2CC3A72909BB0752FF3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85532CEF5B09BEB574C06D2A4E0DEFA9 /* Pods-LabelSwitch_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LabelSwitch_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LabelSwitch_Tests/Pods-LabelSwitch_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		022F80C63D738F13A3E5946B75C11586 /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C92782E717C52E3633C9A5F211E7987A /* Debug */,
-				EA8C7AF90938697605468604B2A17B9F /* Release */,
+				18687ED226762F463914F072C7DBFB78 /* Debug */,
+				05F06546B4BBB522186E69DCD60F365C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F38F4584C0869E1C7A6152CF511B92A /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Tests" */ = {
+		1454827286BB933089E84B8A560F4113 /* Build configuration list for PBXNativeTarget "LabelSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				487268F694CDDF36FCD852BA58D6BAC7 /* Debug */,
-				FA8EEE4E62DB2CC3A72909BB0752FF3C /* Release */,
+				DDA4D00F359F3EE6857483E5E13609E2 /* Debug */,
+				10704DCB43DCF63AD88AD400A7941A25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AC2693F86F8DCA12730920535C4A3CD /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Example" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9CFC2F85C35C70AF6AAE1E833499FAD9 /* Debug */,
-				23BC4CC3FFADE6D8F52EF5DABF6A6D0E /* Release */,
+				896F3DECC5B7D1933ED94888FDBD28A7 /* Debug */,
+				EA4C7FFA184E32295CA3F8212537CB31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9958FAD8B512678F1B9C2701C46CD49 /* Build configuration list for PBXNativeTarget "LabelSwitch" */ = {
+		F9DD69A6C6EED9750169025D655D9F9D /* Build configuration list for PBXNativeTarget "Pods-LabelSwitch_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04832210AFCEE38AAF489A34264ADCCD /* Debug */,
-				A5C2A33F57EFEA46B654E6561FB1F40C /* Release */,
+				201568E1E9464BB3F2AE1DFDC90F2264 /* Debug */,
+				1192607E47348720B3D7C874B9202B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
