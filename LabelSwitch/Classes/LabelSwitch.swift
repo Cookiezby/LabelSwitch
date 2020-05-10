@@ -133,10 +133,10 @@ private class LabelSwitchPart {
     public var fullSizeTapEnabled: Bool = false {
         didSet{
             if fullSizeTapEnabled {
-                fullSizeTapGesture = UITapGestureRecognizer(target: self, action: #selector(switchTaped(sender:)))
+                fullSizeTapGesture = UITapGestureRecognizer(target: self, action: #selector(switchTapped(sender:)))
                 addGestureRecognizer(fullSizeTapGesture!)
             } else {
-                fullSizeTapGesture?.removeTarget(self, action: #selector(switchTaped(sender:)))
+                fullSizeTapGesture?.removeTarget(self, action: #selector(switchTapped(sender:)))
                 fullSizeTapGesture = nil
             }
         }
@@ -205,7 +205,7 @@ private class LabelSwitchPart {
         stateR.circleFrame = CGRect(origin: CGPoint(x: bounds.width - diameter - circlePadding, y: circlePadding),
                                       size: circleSize)
         /// Add the touch event to the circle view
-        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchTaped(sender:))))
+        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchTapped(sender:))))
     }
     
     /// Set the label's frame and color
@@ -232,8 +232,7 @@ private class LabelSwitchPart {
     }
     
     /// Called when the circle is touched
-    @objc
-    private func switchTaped(sender: Any) {
+    @objc private func switchTapped(sender: Any) {
         guard isEnable else { return }
         UIView.animate(withDuration: 0.3, animations: {
             self.curState.flip()
