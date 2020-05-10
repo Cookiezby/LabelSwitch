@@ -155,6 +155,10 @@ private class LabelSwitchPart {
     ///  Enable the swith
     public var isEnable: Bool = true
     
+    override public convenience init(frame: CGRect) {
+        self.init(center: .zero, leftConfig: .defaultLeft, rightConfig: .defaultRight)
+    }
+    
     public init(center: CGPoint,
             leftConfig: LabelSwitchConfig,
            rightConfig: LabelSwitchConfig,
@@ -254,42 +258,50 @@ private class LabelSwitchPart {
     ///  For InterfaceBuilder
     @IBInspectable var lBackColor: UIColor = .white {
         didSet{
+            guard switchConfigL != nil else { return }
             switchConfigL.backgroundColor = lBackColor
         }
     }
     
     @IBInspectable var rBackColor: UIColor = .white {
         didSet{
+            guard switchConfigR != nil else { return }
             switchConfigR.backgroundColor = rBackColor
         }
     }
     
     @IBInspectable var lTextColor: UIColor = .white {
         didSet{
+            guard switchConfigL != nil else { return }
             switchConfigL.textColor = lTextColor
         }
     }
     
     @IBInspectable var rTextColor: UIColor = .white {
         didSet{
+            guard switchConfigR != nil else { return }
             switchConfigR.textColor = rTextColor
         }
     }
     
     @IBInspectable var lText: String = "" {
         didSet{
+            guard switchConfigL != nil else { return }
             switchConfigL.text = lText
         }
     }
     
     @IBInspectable var rText: String = "" {
         didSet{
+            guard switchConfigR != nil else { return }
             switchConfigR.text = rText
         }
     }
     
     @IBInspectable var fontSize: CGFloat = 10 {
         didSet{
+            guard switchConfigR != nil else { return }
+            guard switchConfigL != nil else { return }
             switchConfigL.font = .systemFont(ofSize: fontSize)
             switchConfigR.font = .systemFont(ofSize: fontSize)
         }

@@ -16,15 +16,15 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-i0-4O4" customClass="LabelSwitch" customModule="LabelSwitch">
-                                <rect key="frame" x="135" y="94" width="104" height="65"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-i0-4O4" customClass="LabelSwitch" customModule="LabelSwitch">
+                                <rect key="frame" x="155" y="94" width="104" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="TjC-3y-xbZ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="mrI-2V-c1G"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="60m-DS-uVG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="uFB-54-Byd"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lBackColor">
@@ -49,8 +49,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PGQ-i0-4O4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9wK-yp-25u"/>
-                            <constraint firstItem="PGQ-i0-4O4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="iYb-oT-Sed"/>
+                            <constraint firstItem="PGQ-i0-4O4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3Sz-f4-gvz"/>
+                            <constraint firstItem="PGQ-i0-4O4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="KSh-sO-syx"/>
                         </constraints>
                     </view>
                     <connections>

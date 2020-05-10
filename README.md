@@ -18,8 +18,12 @@ pod 'LabelSwitch'
 
 ## Usage
 
-You can create the view through code or InterfaceBuilder
+*You can create the view through code or InterfaceBuilder*
 
+### Use with Interface Builder
+set the position constarint for the switch, and set the width and height constraint to larger than zero.
+
+### Use with code
 ```swift
 let ls = LabelSwitchConfig(text: "Text1",
                       textColor: .white,
@@ -54,7 +58,6 @@ extension ViewController: LabelSwitchDelegate {
 }
 
 ```
-
 you can also make the switch background to be image or gradient color
 ```
 // gradient color
