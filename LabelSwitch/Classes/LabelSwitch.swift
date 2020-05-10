@@ -235,14 +235,11 @@ private class LabelSwitchPart {
     @objc
     private func switchTaped(sender: Any) {
         guard isEnable else { return }
-        UIView.animate(withDuration: 0.3) {
-            switch self.curState {
-            case .L:
+        UIView.animate(withDuration: 0.3, animations: {
+            self.curState.flip()
+        }) { (completed) in
+            if completed {
                 self.delegate?.switchChangToState(sender: self)
-                self.curState = .R
-            case .R:
-                self.delegate?.switchChangToState(sender: self)
-                self.curState = .L
             }
         }
     }

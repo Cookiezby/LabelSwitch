@@ -55,6 +55,15 @@ public struct LabelSwitchConfig {
 public enum LabelSwitchState {
     case L
     case R
+    
+    mutating func flip() {
+        switch self {
+        case .L:
+            self = .R
+        case .R:
+            self = .L
+        }
+    }
 }
 
 

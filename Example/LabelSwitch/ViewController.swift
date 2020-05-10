@@ -61,8 +61,8 @@ class ViewController: UIViewController {
 extension ViewController: LabelSwitchDelegate {
     func switchChangToState(sender: LabelSwitch) {
         switch sender.curState {
-        case .L: print("circle on left")
-        case .R: print("circle on right")
+        case .L: print("left")
+        case .R: print("right")
         }
     }
 }
