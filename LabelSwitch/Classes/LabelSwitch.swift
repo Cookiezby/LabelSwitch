@@ -88,17 +88,17 @@ private class LabelSwitchPart {
     
     private var switchConfigL: LabelSwitchConfig! {
         didSet {
-            stateL.backgroundColor     = switchConfigL.backgroundColor
+            stateL.backgroundColor = switchConfigL.backgroundColor
             leftPart.setConfig(switchConfigL)
         }
     }
     private var switchConfigR: LabelSwitchConfig! {
         didSet {
-            stateR.backgroundColor    = switchConfigR.backgroundColor
+            stateR.backgroundColor = switchConfigR.backgroundColor
             rightPart.setConfig(switchConfigR)
         }
     }
-    
+
     private var edge: CGFloat = 0
     private let circlePadding: CGFloat
     private let minimumSize: CGSize
@@ -133,10 +133,10 @@ private class LabelSwitchPart {
     public var fullSizeTapEnabled: Bool = false {
         didSet{
             if fullSizeTapEnabled {
-                fullSizeTapGesture = UITapGestureRecognizer(target: self, action: #selector(switchTaped(sender:)))
+                fullSizeTapGesture = UITapGestureRecognizer(target: self, action: #selector(switchTapped(sender:)))
                 addGestureRecognizer(fullSizeTapGesture!)
             } else {
-                fullSizeTapGesture?.removeTarget(self, action: #selector(switchTaped(sender:)))
+                fullSizeTapGesture?.removeTarget(self, action: #selector(switchTapped(sender:)))
                 fullSizeTapGesture = nil
             }
         }
@@ -151,14 +151,21 @@ private class LabelSwitchPart {
             setupCircle()
         }
     }
-
+    
+    ///  Enable the swith
+    public var isEnable: Bool = true
+    
+    override public convenience init(frame: CGRect) {
+        self.init(center: .zero, leftConfig: .defaultLeft, rightConfig: .defaultRight)
+    }
+    
     public init(center: CGPoint,
             leftConfig: LabelSwitchConfig,
            rightConfig: LabelSwitchConfig,
          circlePadding: CGFloat = 1,
            minimumSize: CGSize = .zero,
           defaultState: LabelSwitchState = .L) {
-
+        
         self.circlePadding = circlePadding
         self.minimumSize = minimumSize
         self.curState = defaultState
@@ -169,7 +176,7 @@ private class LabelSwitchPart {
         setConfig(left: leftConfig, right: rightConfig)
         updateUI()
     }
-
+    
     private func updateUI() {
         calculateSize()
         switch curState {
@@ -201,7 +208,7 @@ private class LabelSwitchPart {
         stateR.circleFrame = CGRect(origin: CGPoint(x: bounds.width - diameter - circlePadding, y: circlePadding),
                                       size: circleSize)
         /// Add the touch event to the circle view
-        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchTaped(sender:))))
+        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(switchTapped(sender:))))
     }
     
     /// Set the label's frame and color
@@ -228,16 +235,13 @@ private class LabelSwitchPart {
     }
     
     /// Called when the circle is touched
-    @objc
-    func switchTaped(sender: Any) {
-        UIView.animate(withDuration: 0.3) {
-            switch self.curState {
-            case .L:
+    @objc private func switchTapped(sender: Any) {
+        guard isEnable else { return }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.curState.flip()
+        }) { (completed) in
+            if completed {
                 self.delegate?.switchChangToState(sender: self)
-                self.curState = .R
-            case .R:
-                self.delegate?.switchChangToState(sender: self)
-                self.curState = .L
             }
         }
     }
@@ -254,42 +258,50 @@ private class LabelSwitchPart {
     ///  For InterfaceBuilder
     @IBInspectable var lBackColor: UIColor = .white {
         didSet{
+            guard switchConfigL != nil else { return }
             switchConfigL.backgroundColor = lBackColor
         }
     }
     
     @IBInspectable var rBackColor: UIColor = .white {
         didSet{
+            guard switchConfigR != nil else { return }
             switchConfigR.backgroundColor = rBackColor
         }
     }
     
     @IBInspectable var lTextColor: UIColor = .white {
         didSet{
+            guard switchConfigL != nil else { return }
             switchConfigL.textColor = lTextColor
         }
     }
     
     @IBInspectable var rTextColor: UIColor = .white {
         didSet{
+            guard switchConfigR != nil else { return }
             switchConfigR.textColor = rTextColor
         }
     }
     
     @IBInspectable var lText: String = "" {
         didSet{
+            guard switchConfigL != nil else { return }
             switchConfigL.text = lText
         }
     }
     
     @IBInspectable var rText: String = "" {
         didSet{
+            guard switchConfigR != nil else { return }
             switchConfigR.text = rText
         }
     }
     
     @IBInspectable var fontSize: CGFloat = 10 {
         didSet{
+            guard switchConfigR != nil else { return }
+            guard switchConfigL != nil else { return }
             switchConfigL.font = .systemFont(ofSize: fontSize)
             switchConfigR.font = .systemFont(ofSize: fontSize)
         }

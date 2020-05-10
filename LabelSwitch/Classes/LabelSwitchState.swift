@@ -13,7 +13,7 @@ struct LabelSwitchPartState {
 
 struct LabelSwitchUIState {
     var backgroundColor: UIColor = .clear
-    var circleFrame:CGRect = .zero
+    var circleFrame: CGRect = .zero
     var leftPartState  = LabelSwitchPartState()
     var rightPartState = LabelSwitchPartState()
 }
