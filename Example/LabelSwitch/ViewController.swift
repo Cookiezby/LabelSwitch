@@ -50,12 +50,6 @@ class ViewController: UIViewController {
         let imageLabelSwitch = LabelSwitch(center: CGPoint(x: view.center.x, y: view.center.y + 200), leftConfig: ls3, rightConfig: rs3, defaultState: .L)
         view.addSubview(imageLabelSwitch)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
 extension ViewController: LabelSwitchDelegate {

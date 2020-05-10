@@ -152,10 +152,9 @@ private class LabelSwitchPart {
         }
     }
     
-    
     ///  Enable the swith
     public var isEnable: Bool = true
-
+    
     public init(center: CGPoint,
             leftConfig: LabelSwitchConfig,
            rightConfig: LabelSwitchConfig,
