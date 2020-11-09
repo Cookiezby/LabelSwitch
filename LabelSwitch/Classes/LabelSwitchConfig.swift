@@ -23,6 +23,7 @@ public struct LabelSwitchConfig {
     var backgroundColor: UIColor
     var backGradient: GradientBack?
     var backImage: UIImage?
+    var image: UIImage?
     
     public init(text: String, textColor: UIColor, font: UIFont, backgroundColor: UIColor) {
         self.text = text
@@ -39,6 +40,11 @@ public struct LabelSwitchConfig {
     public init(text: String, textColor: UIColor, font: UIFont, image: UIImage?) {
         self.init(text: text, textColor: textColor, font: font, backgroundColor: .white)
         self.backImage = image
+    }
+    
+    public init(text: String, textColor: UIColor, font: UIFont, labelImage: UIImage?, background: UIColor) {
+        self.init(text: text, textColor: textColor, font: font, backgroundColor: background)
+        self.image = labelImage
     }
     
     public static let defaultLeft = LabelSwitchConfig(text: "Left",

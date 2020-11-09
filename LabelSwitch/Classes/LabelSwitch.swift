@@ -22,6 +22,12 @@ private class LabelSwitchPart {
         return label
     }()
     
+    let image: UIImageView = {
+        let img = UIImageView(frame: CGRect(x: 2, y: 2, width: 13, height: 13))
+        img.contentMode = .scaleAspectFit
+        return img
+    }()
+    
     let back: LabelSwitchBackView = {
         let view = LabelSwitchBackView()
         return view
@@ -39,6 +45,7 @@ private class LabelSwitchPart {
         label.textColor = config.textColor
         label.text = config.text
         label.font = config.font
+        image.image = config.image
         label.sizeToFit()
         
         if let gradient = config.backGradient {
@@ -52,6 +59,7 @@ private class LabelSwitchPart {
             back.imageView.image = image
             back.imageView.isHidden = false
         }
+
     }
     
     func setState(_ state: LabelSwitchPartState) {
@@ -76,6 +84,7 @@ private class LabelSwitchPart {
         let part = LabelSwitchPart()
         addSubview(part.back)
         addSubview(part.label)
+        addSubview(part.image)
         return part
     }()
     
@@ -83,6 +92,7 @@ private class LabelSwitchPart {
         let part = LabelSwitchPart()
         addSubview(part.back)
         addSubview(part.label)
+        addSubview(part.image)
         return part
     }()
     
@@ -148,6 +158,7 @@ private class LabelSwitchPart {
             layer.cornerRadius = calculatedSize.height / 2
             setupTextMask()
             setupLabel()
+            setupImage()
             setupCircle()
         }
     }
@@ -190,9 +201,13 @@ private class LabelSwitchPart {
         let circleMinimumSize = minimumSize.height - 2 * circlePadding
         let circleSize = max(circleMinimumSize, max(switchConfigL.font.pointSize, switchConfigR.font.pointSize) * 2)
         edge = circleSize * 0.2
-       
-        let width = max(minimumSize.width, max(leftPart.label.bounds.width, rightPart.label.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
-        calculatedSize = CGSize(width: width, height: circleSize + 2 * circlePadding)
+        if (leftPart.label.text == "") || (rightPart.label.text == "") {
+            let width = max(minimumSize.width, max(leftPart.image.bounds.width, rightPart.image.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
+            calculatedSize = CGSize(width: width, height: circleSize + 2 * circlePadding)
+        } else {
+            let width = max(minimumSize.width, max(leftPart.label.bounds.width, rightPart.label.bounds.width) + 2 * edge + circleSize + 2 * circlePadding)
+            calculatedSize = CGSize(width: width, height: circleSize + 2 * circlePadding)
+        }
     }
 
     /// Calculate the left frame and right frame for the circle
@@ -217,6 +232,14 @@ private class LabelSwitchPart {
                                         y: bounds.height / 2)
         
         rightPart.label.center = CGPoint(x: (bounds.width + bounds.height - edge) / 2,
+                                         y: bounds.height / 2)
+    }
+    
+    private func setupImage(){
+        leftPart.image.center = CGPoint(x: (bounds.width - bounds.height + edge) / 2,
+                                        y: bounds.height / 2)
+        
+        rightPart.image.center = CGPoint(x: (bounds.width + bounds.height - edge) / 2,
                                          y: bounds.height / 2)
     }
     
